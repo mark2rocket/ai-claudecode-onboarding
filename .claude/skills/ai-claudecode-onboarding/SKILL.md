@@ -1,6 +1,6 @@
-# Day 1: 컨텐츠 워크플로우 챌린지 온보딩
+# Day 1: Claude Code 온보딩 — 1인 크리에이터를 위한 워크플로우 챌린지
 
-> 비개발자를 위한 Claude Code 컨텐츠 워크플로우 챌린지 첫 번째 날.
+> 비개발자 1인 사업가·크리에이터를 위한 Claude Code 온보딩.
 > 슬라이드를 보는 강의가 아닙니다. Claude가 직접 가르치고, 질문하고, 실습을 안내합니다.
 
 ---
@@ -24,28 +24,33 @@
 
 ## 블록 구성
 
-| 블록 | 주제 | 형식 |
-|------|------|------|
-| 0 | 설치 & 첫 실행 | Phase A만 (퀴즈 없음) |
-| 1 | 7일 후 미리 체험 | 데모 3개 + Phase B 소감 |
-| 2 | 왜 터미널인가? | 퀴즈 1(Phase A) + 퀴즈 2(Phase B) |
-| 3 | 7가지 핵심 기능 | 3-1 Memory → 3-7 Plugin + 쉬어가기 |
-| 4 | 터미널 & git 기초 | Phase A 설명 + Phase B 퀴즈 3개 |
+| 블록 | 주제 | 형식 | 중요도 |
+|------|------|------|--------|
+| 0 | 설치 & 첫 실행 | Phase A만 (퀴즈 없음) | 필수 |
+| 1 | 7일 후 미리 체험 | 데모 3개 + Phase B 소감 | 필수 |
+| 2 | 왜 터미널인가? | 퀴즈 1(Phase A) + 퀴즈 2(Phase B) | 필수 |
+| 3-필수 | 핵심 기능 3가지 (Memory·Skill·MCP) | 각 Phase A + B | **오늘 당장 쓸 것** |
+| 3-심화 | 심화 기능 4가지 (Subagent·Teams·Hook·Plugin) | 각 Phase A + B | 나중에 필요할 때 |
+| 4 | 터미널 & git 기초 | Phase A + Phase B 퀴즈 3개 | **선택 (협업·버전관리 필요 시)** |
 
 ---
 
 ## 시작
 
-아래 테이블을 보여주고, AskUserQuestion으로 어디서 시작할지 물어본다.
+아래 안내를 보여주고, AskUserQuestion으로 어디서 시작할지 물어본다.
 
 ```
-📋 오늘의 여정:
+📋 오늘의 여정
 
-Block 0 → 설치가 안 되어 있다면 여기서 시작
-Block 1 → 7일 후 모습을 먼저 체험
-Block 2 → 왜 터미널을 써야 하는가?
-Block 3 → Claude Code 7가지 핵심 기능
-Block 4 → 터미널 & git 기초 (처음이라면 필수)
+⭐ 필수 코스 (모든 분께 추천)
+  Block 0 → 설치가 안 되어 있다면 여기서 시작
+  Block 1 → 7일 후 모습을 먼저 체험
+  Block 2 → 왜 터미널을 써야 하는가?
+  Block 3-필수 → 오늘 당장 쓸 핵심 기능 3가지 (Memory·Skill·MCP)
+
+🔧 심화 코스 (여유 있을 때)
+  Block 3-심화 → Subagent·Agent Teams·Hook·Plugin
+  Block 4 → 터미널 & git 기초 (협업·버전관리 필요 시, 선택)
 ```
 
 ```json
@@ -56,8 +61,8 @@ AskUserQuestion({
     "options": [
       {"label": "Block 0: 설치 & 첫 실행", "description": "Claude Code를 처음 설치하는 분"},
       {"label": "Block 1: 7일 후 미리 체험", "description": "설치는 됐고 바로 체험하고 싶은 분"},
-      {"label": "Block 2: 왜 터미널인가?", "description": "철학적 이유가 궁금한 분"},
-      {"label": "Block 3: 핵심 기능 7가지", "description": "기능을 하나씩 배우고 싶은 분"}
+      {"label": "Block 3-필수: 핵심 기능 3가지", "description": "오늘 당장 쓸 Memory·Skill·MCP부터"},
+      {"label": "Block 2: 왜 터미널인가?", "description": "철학적 이유가 먼저 궁금한 분"}
     ],
     "multiSelect": false
   }]
@@ -69,5 +74,6 @@ AskUserQuestion({
 - Block 0 → `references/block0-setup.md`
 - Block 1 → `references/block1-experience.md`
 - Block 2 → `references/block2-why.md`
-- Block 3 → `references/block3-1-memory.md` 부터 순서대로
-- Block 4 → `references/block4-basics.md`
+- Block 3 필수 → `references/block3-1-memory.md` → `block3-2-skill.md` → `block3-3-mcp.md` → `block3-summary.md`
+- Block 3 심화 → `references/block3-4-subagent.md` → `block3-5-agent-teams.md` → `block3-6-hook.md` → `block3-7-plugin.md`
+- Block 4 (선택) → `references/block4-basics.md`
