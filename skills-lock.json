@@ -10,21 +10,6 @@
       "source": "ai-native-camp/camp-2",
       "sourceType": "github",
       "computedHash": "ade6914f56370b04e978a5403dff7fe408ddba3aabf5856a256c9afe8c60ba80"
-    },
-    "day2-mcp-and-context-sync": {
-      "source": "ai-native-camp/camp-2",
-      "sourceType": "github",
-      "computedHash": "7104fe6c90c86dab02bf35d772a8be27bc43978a8bf6ebc40489a33be98a3e19"
-    },
-    "day3-clarify": {
-      "source": "ai-native-camp/camp-2",
-      "sourceType": "github",
-      "computedHash": "6559a7794e3342acc33bb95b7d47ce402f06ea8754f8e7ddc91686a34c46af7b"
-    },
-    "day4-wrap-and-analyze": {
-      "source": "ai-native-camp/camp-2",
-      "sourceType": "github",
-      "computedHash": "b7f1db4ce21d5bdcefb9b900a22348179bfe53aa118c16ce96e923e71b11dc47"
     }
   }
 }
