@@ -1,6 +1,6 @@
-# ai-claudecode-onboarding
+# ai-contents-challenge
 
-비개발자 1인 사업가·크리에이터를 위한 **Claude Code Day 1 온보딩 스킬**입니다.
+비개발자 1인 사업가·크리에이터를 위한 **Claude Code AI 컨텐츠 워크플로우 챌린지** 스킬 모음입니다.
 
 슬라이드 강의가 아닙니다. Claude가 직접 설명하고, 질문하고, 실습을 안내합니다.
 
@@ -16,14 +16,28 @@
 
 ## 커리큘럼
 
-| 블록 | 주제 | 중요도 |
-|------|------|--------|
-| Block 0 | 설치 & 첫 실행 | 필수 |
-| Block 1 | 7일 후 모습 미리 체험 | 필수 |
-| Block 2 | 왜 터미널인가? | 필수 |
-| Block 3-필수 | Memory · Skill · MCP | **오늘 당장 쓸 것** |
-| Block 3-심화 | Subagent · Agent Teams · Hook · Plugin | 나중에 |
-| Block 4 | 터미널 & git 기초 | 선택 (협업 시) |
+| 주차 | 주제 |
+|------|------|
+| Week 1 | AX 마인드셋 + Claude Code 기본 & 필수 기능 |
+| Week 2 | (예정) |
+| Week 3 | (예정) |
+| Week 4 | (예정) |
+
+### Week 1 블록 구성
+
+| 블록 | 주제 |
+|------|------|
+| Block 0 | AX 마인드셋 — AI 시대에 일하는 방식 |
+| Block 1 | 설치 & 첫 실행 |
+| Block 2 | 7일 후 모습 미리 체험 (`/oh-my-cardnews` 데모) |
+| Block 2-Break | 터미널 꾸미기 & 상태바 설정 |
+| Block 3 | 왜 터미널인가? |
+| Block 4-1 | Memory — Claude가 나를 기억하게 하기 |
+| Block 4-2 | Skill — 반복 작업 자동화 |
+| Block 4-3 | MCP — 외부 도구 연결 |
+| Block 4-4 | Subagent — 병렬 작업 위임 |
+| Block 4-5 | Advanced Features 소개 |
+| Block 5 | 터미널 & git 기초 |
 
 ---
 
@@ -44,7 +58,7 @@ Claude Code 터미널에서:
 git clone https://github.com/mark2rocket/ai-claudecode-onboarding.git
 
 # 2. 스킬 폴더를 내 Claude 설정으로 복사
-cp -r ai-claudecode-onboarding/.claude/skills/ai-claudecode-onboarding ~/.claude/skills/
+cp -r ai-claudecode-onboarding/.agents/skills/ai-contents-week1 ~/.claude/skills/
 ```
 
 ### 설치 확인
@@ -55,16 +69,16 @@ Claude Code 터미널에서:
 /skill list
 ```
 
-`ai-claudecode-onboarding` 항목이 보이면 성공입니다.
+`ai-contents-week1` 항목이 보이면 성공입니다.
 
 ---
 
 ## 사용 방법
 
-Claude Code 터미널에서 아래 명령을 입력하면 온보딩이 시작됩니다:
+Claude Code 터미널에서 아래 명령을 입력하면 Week 1 수업이 시작됩니다:
 
 ```
-/ai-claudecode-onboarding
+/ai-contents-week1
 ```
 
 Claude가 어느 블록부터 시작할지 물어보고, 설명 → 실습 → 퀴즈 순서로 진행합니다.
