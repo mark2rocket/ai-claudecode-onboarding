@@ -1,4 +1,4 @@
-# ai-contents-challenge
+# claudecode-ai-contents-challenge
 
 비개발자 1인 사업가·크리에이터를 위한 **Claude Code AI 컨텐츠 워크플로우 챌린지** 스킬 모음입니다.
 
@@ -19,7 +19,7 @@
 | 주차 | 주제 |
 |------|------|
 | Week 1 | AX 마인드셋 + Claude Code 기본 & 필수 기능 |
-| Week 2 | (예정) |
+| Week 2 | 카드뉴스 워크플로우 — 기획·프롬프트 구체화·파이프라인·템플릿 |
 | Week 3 | (예정) |
 | Week 4 | (예정) |
 
@@ -48,17 +48,18 @@
 Claude Code 터미널에서:
 
 ```
-/skill add https://github.com/mark2rocket/ai-claudecode-onboarding
+/skill add https://github.com/mark2rocket/claudecode-ai-contents-challenge
 ```
 
 ### 방법 2: 직접 복사
 
 ```bash
 # 1. 저장소 클론
-git clone https://github.com/mark2rocket/ai-claudecode-onboarding.git
+git clone https://github.com/mark2rocket/claudecode-ai-contents-challenge.git
 
 # 2. 스킬 폴더를 내 Claude 설정으로 복사
-cp -r ai-claudecode-onboarding/.agents/skills/ai-contents-week1 ~/.claude/skills/
+cp -r claudecode-ai-contents-challenge/.agents/skills/ai-contents-week1 ~/.claude/skills/
+cp -r claudecode-ai-contents-challenge/.agents/skills/ai-contents-week2 ~/.claude/skills/
 ```
 
 ### 설치 확인
@@ -69,16 +70,17 @@ Claude Code 터미널에서:
 /skill list
 ```
 
-`ai-contents-week1` 항목이 보이면 성공입니다.
+`ai-contents-week1`, `ai-contents-week2` 항목이 보이면 성공입니다.
 
 ---
 
 ## 사용 방법
 
-Claude Code 터미널에서 아래 명령을 입력하면 Week 1 수업이 시작됩니다:
+Claude Code 터미널에서 아래 명령을 입력하면 수업이 시작됩니다:
 
 ```
-/ai-contents-week1
+/ai-contents-week1   # Week 1: AX 마인드셋 + Claude Code 기초
+/ai-contents-week2   # Week 2: 카드뉴스 워크플로우
 ```
 
 Claude가 어느 블록부터 시작할지 물어보고, 설명 → 실습 → 퀴즈 순서로 진행합니다.
