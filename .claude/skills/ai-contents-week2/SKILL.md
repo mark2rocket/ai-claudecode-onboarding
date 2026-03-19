@@ -62,15 +62,15 @@ Phase A의 마지막에는 반드시 아래 형태의 문구를 출력하고 Sto
 ### 블록 특수 규칙
 
 - **Block Recap (Week 1 복습)**: Phase A만. 퀴즈 없음. 7줄 요약 + Week 1→2 연결 설명 후 자동으로 Block 0으로 이동.
-- **Block 0 (기획 이론)**: Phase A 설명 + 실행 안내 → Stop. Phase B에서 퀴즈 1개.
-- **Block 1 (심플)**: Phase A에서 날것 프롬프트 실행 안내 → Stop. Phase B에서 퀴즈 1개.
-- **Block 2 (타겟+장수)**: Phase A에서 예측 훈련 + 실행 안내 → Stop. Phase B에서 퀴즈 1개.
-- **Block 3 (상세 내용)**: Phase A에서 스토리 구조 틀 제공 + 실행 안내 → Stop. Phase B에서 퀴즈 1개.
-- **Block 4 (HTML로 보기)**: Phase A에서 텍스트→HTML 시각 전환 체험 안내 → Stop. Phase B에서 퀴즈 1개.
-- **Block 5a (디자인 스펙)**: Phase A에서 스펙 4요소 설명 + 실행 안내 → Stop. Phase B에서 퀴즈 1개.
-- **Block 5b (레이아웃)**: Phase A에서 레이아웃 3요소 + 카드 유형별 구조 설명 + 실행 안내 → Stop. Phase B에서 퀴즈 1개.
-- **Block 6 (파이프라인)**: Phase A에서 5단계 순서대로 실행 안내 → Stop. **퀴즈 없음.** 완성 결과물로 마무리.
-- **Block 7 (템플릿)**: Phase A에서 3종 생성 + 교체 체험 안내 → Stop. Phase B에서 퀴즈 1개 + Week 2 마무리.
+- **Block 0 (기획 = 추측 통제)**: Phase A 설명 + 실행 안내 → Stop. Phase B에서 퀴즈 1개.
+- **Block 1 (한 줄 프롬프트)**: Phase A에서 날것 프롬프트 실행 안내 → Stop. Phase B에서 퀴즈 1개.
+- **Block 2 (독자·분량 지정)**: Phase A에서 예측 훈련 + 실행 안내 → Stop. Phase B에서 퀴즈 1개.
+- **Block 3 (스토리 구조 설계)**: Phase A에서 스토리 구조 틀 제공 + 실행 안내 → Stop. Phase B에서 퀴즈 1개.
+- **Block 4 (카드 시각화)**: Phase A에서 텍스트→HTML 시각 전환 체험 안내 → Stop. Phase B에서 퀴즈 1개.
+- **Block 5a (색상·폰트 지정)**: Phase A에서 스펙 4요소 설명 + 실행 안내 → Stop. Phase B에서 퀴즈 1개.
+- **Block 5b (카드 배치 설계)**: Phase A에서 레이아웃 3요소 + 카드 유형별 구조 설명 + 실행 안내 → Stop. Phase B에서 퀴즈 1개.
+- **Block 6 (전체 흐름 실행)**: Phase A에서 5단계 순서대로 실행 안내 → Stop. **퀴즈 없음.** 완성 결과물로 마무리.
+- **Block 7 (재사용 템플릿)**: Phase A에서 3종 생성 + 교체 체험 안내 → Stop. Phase B에서 퀴즈 1개 + Week 2 마무리.
 
 ---
 
@@ -79,15 +79,15 @@ Phase A의 마지막에는 반드시 아래 형태의 문구를 출력하고 Sto
 | 블록 | 파일 |
 |------|------|
 | Block Recap | `references/block-recap.md` (Week 1 복습 + Week 2 연결) |
-| Block 0 | `references/block0-planning.md` (기획 이론) |
-| Block 1 | `references/block1-simple.md` (심플 — 한 문장) |
-| Block 2 | `references/block2-target.md` (타겟+장수) |
-| Block 3 | `references/block3-content.md` (카드뉴스 상세 내용) |
-| Block 4 | `references/block4-structure.md` (HTML로 보기) |
-| Block 5a | `references/block5a-design.md` (이미지 디자인 스펙) |
-| Block 5b | `references/block5b-layout.md` (레이아웃) |
-| Block 6 | `references/block6-pipeline.md` (파이프라인 만들기) |
-| Block 7 | `references/block7-template.md` (완성형 템플릿 3종) |
+| Block 0 | `references/block0-planning.md` (기획 = 추측 통제) |
+| Block 1 | `references/block1-simple.md` (한 줄 프롬프트) |
+| Block 2 | `references/block2-target.md` (독자·분량 지정) |
+| Block 3 | `references/block3-content.md` (스토리 구조 설계) |
+| Block 4 | `references/block4-structure.md` (카드 시각화) |
+| Block 5a | `references/block5a-design.md` (색상·폰트 지정) |
+| Block 5b | `references/block5b-layout.md` (카드 배치 설계) |
+| Block 6 | `references/block6-pipeline.md` (전체 흐름 실행) |
+| Block 7 | `references/block7-template.md` (재사용 템플릿 3종) |
 
 > 파일 경로는 이 SKILL.md 기준 상대경로다.
 > 각 reference 파일은 `## EXPLAIN`, `## EXECUTE`, `## QUIZ` 섹션으로 구성된다.
@@ -134,7 +134,7 @@ AskUserQuestion({
     "header": "Week 1 복습",
     "options": [
       {"label": "복습 블록 보기", "description": "Week 1 → Week 2 연결을 4컷 만화로 확인 (5분)"},
-      {"label": "바로 시작", "description": "Block 0 기획 이론부터 바로 시작"}
+      {"label": "바로 시작", "description": "Block 0 기획 = 추측 통제부터 바로 시작"}
     ],
     "multiSelect": false
   }]
@@ -163,15 +163,15 @@ AskUserQuestion({
 
 | Block | 주제 | 핵심 체험 |
 |-------|------|-----------|
-| 0 | 기획 이론 | "추측을 통제하는 것이 기획" |
-| 1 | 심플 | 한 문장으로 시작 → "Claude가 전부 결정한다" 체험 |
-| 2 | 타겟+장수 | 독자와 분량이 결과를 바꾼다 |
-| 3 | 상세 내용 | 스토리 구조 + 리서치/인터뷰 트랙 선택 |
-| 4 | HTML로 보기 | 텍스트 → 브라우저 카드 시각 전환 체험 |
-| 5a | 디자인 스펙 | 수치가 디자이너 역할을 한다 |
-| 5b | 레이아웃 | 카드 유형별 배치·여백·계층 구조 |
-| 6 | 파이프라인 | 5단계를 순서대로 직접 실행 |
-| 7 | 템플릿 | 완성형 HTML 3종 → 다음번엔 교체만 |
+| 0 | 기획 = 추측 통제 | Claude의 추측을 줄이는 것이 기획이다 |
+| 1 | 한 줄 프롬프트 | 한 문장으로 시작 → "Claude가 전부 결정한다" 체험 |
+| 2 | 독자·분량 지정 | 독자와 분량이 결과를 바꾼다 |
+| 3 | 스토리 구조 설계 | 스토리 구조 + 리서치/인터뷰 트랙 선택 |
+| 4 | 카드 시각화 | 텍스트 → 브라우저 카드 시각 전환 체험 |
+| 5a | 색상·폰트 지정 | 수치가 디자이너 역할을 한다 |
+| 5b | 카드 배치 설계 | 카드 유형별 배치·여백·계층 구조 |
+| 6 | 전체 흐름 실행 | 5단계를 순서대로 직접 실행 |
+| 7 | 재사용 템플릿 | 완성형 HTML 3종 → 다음번엔 교체만 |
 
 ```json
 AskUserQuestion({
@@ -179,10 +179,10 @@ AskUserQuestion({
     "question": "Week 2 어디서부터 시작할까요?",
     "header": "시작 블록",
     "options": [
-      {"label": "Block 0: 기획 이론", "description": "추측을 통제하는 것이 기획 — 처음이라면 여기서 시작"},
-      {"label": "Block 1: 심플", "description": "한 문장으로 시작 — Claude가 전부 결정하는 것 체험"},
-      {"label": "Block 3: 상세 내용", "description": "스토리 구조로 카드뉴스 흐름 잡기"},
-      {"label": "Block 6 이후부터", "description": "Block 6(파이프라인), Block 7(템플릿) — 번호를 말해주세요"}
+      {"label": "Block 0: 기획 = 추측 통제", "description": "Claude의 추측을 줄이는 것이 기획 — 처음이라면 여기서 시작"},
+      {"label": "Block 1: 한 줄 프롬프트", "description": "한 문장으로 시작 — Claude가 전부 결정하는 것 체험"},
+      {"label": "Block 3: 스토리 구조 설계", "description": "스토리 구조 + 리서치/인터뷰 트랙으로 내용 설계"},
+      {"label": "Block 6 이후부터", "description": "Block 6(전체 흐름 실행), Block 7(재사용 템플릿) — 번호를 말해주세요"}
     ],
     "multiSelect": false
   }]
