@@ -108,7 +108,7 @@ Phase 3: 디자인 스펙 적용
 → "content_brief.md의 디자인 스펙을 HTML에 정확히 반영해줘"
 
 Phase 4: 결과 확인
-→ HTML 파일 브라우저에서 열기
+→ "cardnews.html로 저장하고 브라우저로 바로 열어줘"
 
 Phase 5: 피드백 반영 (선택)
 → 수정하고 싶은 부분을 Claude에게 말하기
