@@ -61,6 +61,7 @@ Phase A의 마지막에는 반드시 아래 형태의 문구를 출력하고 Sto
 
 ### 블록 특수 규칙
 
+- **Block Recap (Week 1 복습)**: Phase A만. 퀴즈 없음. 7줄 요약 + Week 1→2 연결 설명 후 자동으로 Block 0으로 이동.
 - **Block 0 (기획 이론)**: Phase A 설명 + 실행 안내 → Stop. Phase B에서 퀴즈 1개.
 - **Block 1 (심플)**: Phase A에서 날것 프롬프트 실행 안내 → Stop. Phase B에서 퀴즈 1개.
 - **Block 2 (타겟+장수)**: Phase A에서 예측 훈련 + 실행 안내 → Stop. Phase B에서 퀴즈 1개.
@@ -76,6 +77,7 @@ Phase A의 마지막에는 반드시 아래 형태의 문구를 출력하고 Sto
 
 | 블록 | 파일 |
 |------|------|
+| Block Recap | `references/block-recap.md` (Week 1 복습 + Week 2 연결) |
 | Block 0 | `references/block0-planning.md` (기획 이론) |
 | Block 1 | `references/block1-simple.md` (심플 — 한 문장) |
 | Block 2 | `references/block2-target.md` (타겟+장수) |
@@ -103,7 +105,44 @@ Phase A의 마지막에는 반드시 아래 형태의 문구를 출력하고 Sto
 
 ## 시작
 
-스킬 시작 시 **전체 커리큘럼 개요**를 먼저 보여주고, Week 2 블록 선택 질문을 한다.
+스킬 시작 시 아래 순서로 진행한다:
+
+**1. Week 1 핵심 요약을 먼저 출력한다 (항상)**
+
+```
+📌 Week 1 복습
+─────────────────────────────────────────────────
+AX 마인드셋  AI는 실무자, 나는 디렉터
+Memory      CLAUDE.md(내가 씀) + Auto Memory(Claude)
+Skill       /명령어 하나로 워크플로우 실행
+MCP         외부 도구(Slack·Notion 등) 연결
+Subagent    탐색·분석을 에이전트에 위임
+Agent Teams 여러 에이전트가 협업해서 결과물 생성
+Hook/Plugin 자동 실행·기능 확장
+─────────────────────────────────────────────────
+Week 2에서는 이것들을 카드뉴스 제작에 직접 적용합니다.
+```
+
+**2. 복습 블록 여부를 묻는다**
+
+```json
+AskUserQuestion({
+  "questions": [{
+    "question": "Week 1 복습 블록을 볼까요?",
+    "header": "Week 1 복습",
+    "options": [
+      {"label": "복습 블록 보기", "description": "Week 1 → Week 2 연결을 4컷 만화로 확인 (5분)"},
+      {"label": "바로 시작", "description": "Block 0 기획 이론부터 바로 시작"}
+    ],
+    "multiSelect": false
+  }]
+})
+```
+
+> "복습 블록 보기" 선택 시 → `references/block-recap.md` 읽고 내용 출력 → 자동으로 Block 0으로 이동
+> "바로 시작" 선택 시 → 아래 블록 선택 질문으로 이동
+
+**3. 블록 선택 질문**
 
 ### 전체 커리큘럼 (4주)
 
