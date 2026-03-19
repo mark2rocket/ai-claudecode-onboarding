@@ -67,7 +67,8 @@ Phase A의 마지막에는 반드시 아래 형태의 문구를 출력하고 Sto
 - **Block 2 (타겟+장수)**: Phase A에서 예측 훈련 + 실행 안내 → Stop. Phase B에서 퀴즈 1개.
 - **Block 3 (상세 내용)**: Phase A에서 스토리 구조 틀 제공 + 실행 안내 → Stop. Phase B에서 퀴즈 1개.
 - **Block 4 (구성+포맷)**: Phase A에서 내부 구조 설명 + HTML 저장 안내 → Stop. Phase B에서 퀴즈 1개.
-- **Block 5 (디자인 스펙)**: Phase A에서 스펙 4요소 설명 + 실행 안내 → Stop. Phase B에서 퀴즈 1개.
+- **Block 5a (디자인 스펙)**: Phase A에서 스펙 4요소 설명 + 실행 안내 → Stop. Phase B에서 퀴즈 1개.
+- **Block 5b (레이아웃)**: Phase A에서 레이아웃 3요소 + 카드 유형별 구조 설명 + 실행 안내 → Stop. Phase B에서 퀴즈 1개.
 - **Block 6 (파이프라인)**: Phase A에서 5단계 순서대로 실행 안내 → Stop. **퀴즈 없음.** 완성 결과물로 마무리.
 - **Block 7 (템플릿)**: Phase A에서 3종 생성 + 교체 체험 안내 → Stop. Phase B에서 퀴즈 1개 + Week 2 마무리.
 
@@ -83,7 +84,8 @@ Phase A의 마지막에는 반드시 아래 형태의 문구를 출력하고 Sto
 | Block 2 | `references/block2-target.md` (타겟+장수) |
 | Block 3 | `references/block3-content.md` (카드뉴스 상세 내용) |
 | Block 4 | `references/block4-structure.md` (구성+포맷) |
-| Block 5 | `references/block5-design.md` (이미지 디자인 스펙) |
+| Block 5a | `references/block5a-design.md` (이미지 디자인 스펙) |
+| Block 5b | `references/block5b-layout.md` (레이아웃) |
 | Block 6 | `references/block6-pipeline.md` (파이프라인 만들기) |
 | Block 7 | `references/block7-template.md` (완성형 템플릿 3종) |
 
@@ -166,7 +168,8 @@ AskUserQuestion({
 | 2 | 타겟+장수 | 독자와 분량이 결과를 바꾼다 |
 | 3 | 상세 내용 | 스토리 구조로 흐름을 만든다 |
 | 4 | 구성+포맷 | 내부 구조 + HTML로 실제 카드처럼 |
-| 5 | 디자인 스펙 | 수치가 디자이너 역할을 한다 |
+| 5a | 디자인 스펙 | 수치가 디자이너 역할을 한다 |
+| 5b | 레이아웃 | 카드 유형별 배치·여백·계층 구조 |
 | 6 | 파이프라인 | 5단계를 순서대로 직접 실행 |
 | 7 | 템플릿 | 완성형 HTML 3종 → 다음번엔 교체만 |
 
