@@ -78,20 +78,23 @@ scroll-snap 또는 JavaScript 타이머로 전환
 ### GIF 소스 찾는 법
 
 ```
-추천 사이트:
-  1. GIPHY (giphy.com)
-     - 검색: "technology", "ai", "data", "business"
-     - 다운로드: GIF 선택 → Download → Original
+⚠️ GIPHY, Tenor 주의: 상업적 SNS 채널에 사용 시 원저작자 허가가 필요할 수 있다.
 
-  2. Tenor (tenor.com)
-     - 구글 검색 시 자주 나오는 GIF 소스
+안전한 소스 (CC0, 상업적 사용 가능):
+  1. Pixabay GIF (pixabay.com → 이미지 탭 → GIF 필터)
+     - 검색: "digital", "technology", "abstract", "light"
+     - 무료, 상업적 사용 가능
 
-  3. Unsplash (unscreen.com)
-     - 영상 배경 제거 후 GIF 변환 가능
+  2. Claude가 CSS 애니메이션으로 직접 생성 (가장 안전)
+     - "빛이 흐르는 파란 추상 배경 CSS 애니메이션 만들어줘"
+     - 저작권 걱정 없는 완전한 원본
+
+  3. Pexels Video (pexels.com/videos) → MP4를 배경으로 활용
+     - Claude에게: "이 MP4를 HTML video 태그로 배경에 넣어줘"
 
 Claude에게 맡기는 방법:
-  "AI 트렌드 릴스용 GIF 배경으로 어울리는
-   GIPHY 검색어 3개 추천해줘"
+  "AI 트렌드 릴스용 배경으로 어울리는
+   Pixabay 검색어 3개 추천해줘"
 ```
 
 ---
@@ -137,7 +140,11 @@ Claude에게 입력:
 5. CTA: 팔로우 유도
 ```
 
-GIPHY에서 추천 검색어로 GIF 3개 다운로드 후 프로젝트 폴더에 저장.
+GIPHY에서 추천 검색어로 GIF(또는 MP4) 3개 다운로드 후 프로젝트 폴더에 저장.
+
+💡 파일명 주의: 다운로드한 파일명이 긴 영어인 경우 아래처럼 바꿔준다.
+  → gif1.gif, gif2.gif, gif3.gif (또는 video1.mp4, video2.mp4)
+  파일명이 다르면 HTML에서 불러올 때 이미지가 안 뜬다.
 
 ---
 

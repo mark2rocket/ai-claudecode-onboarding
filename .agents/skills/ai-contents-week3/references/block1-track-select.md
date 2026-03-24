@@ -97,6 +97,28 @@
 
 ---
 
+### 왜 CapCut·Canva가 아닌 HTML과 Remotion인가?
+
+```
+CapCut, Canva Video 같은 툴은 훌륭하지만 한 가지 근본적 한계가 있다:
+  반드시 사람의 손이 타야 한다.
+
+  클릭 → 드래그 → 텍스트 입력 → 렌더링 버튼 클릭
+  → 이 모든 과정을 사람이 매번 직접 해야 한다.
+
+Claude(AI 에이전트)가 처음부터 끝까지 혼자 실행할 수 없다는 뜻이다.
+
+HTML과 Remotion은 다르다:
+  Claude가 코드를 작성 → 코드 파일이 곧 영상
+  → video_brief.md 하나로 전체 파이프라인 자동 실행 가능
+  → Week 4에서 "/my-reels" 한 줄로 전체 과정 자동화
+
+Week 3에서 이 두 가지를 배우는 이유가 여기에 있다.
+에이전트 기반 콘텐츠 제작의 핵심은 Claude가 직접 실행할 수 있는 도구다.
+```
+
+---
+
 ## EXECUTE
 
 **각 트랙을 Claude에게 소개받아 보자:**
@@ -135,7 +157,7 @@ AskUserQuestion({
     "options": [
       {"label": "Track 1: 릴스", "description": "인스타/틱톡용 세로형 영상 — HTML+FFmpeg으로 단계별 완성 → Block 2부터"},
       {"label": "Track 2: Remotion", "description": "홍보/온보딩/강의 영상 — React 컴포넌트로 영상 제작 → Block 6부터"},
-      {"label": "둘 다", "description": "Track 1 먼저 완료 후 Track 2로 이동 — Block 2부터 순서대로"}
+      {"label": "둘 다 (순서대로)", "description": "Track 1 릴스 완료 후 Track 2 Remotion — 시간 여유 있을 때 권장, Block 2부터 시작"}
     ],
     "multiSelect": false
   }]

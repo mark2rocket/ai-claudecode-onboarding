@@ -96,6 +96,11 @@ const scale = spring({ frame, fps, config: { damping: 20 }});
 </Sequence>
 ```
 
+> 위 코드를 이해할 필요 없다.
+> Claude에게 "홍보 영상 Remotion 컴포넌트 만들어줘"라고 하면
+> useCurrentFrame, interpolate를 포함한 전체 코드를 생성해준다.
+> 코드에 에러가 나면 에러 메시지만 그대로 Claude에게 붙여넣으면 된다.
+
 ---
 
 ### 홍보 영상 구조 (Hook → 문제 → 해결 → CTA)
@@ -119,6 +124,19 @@ const scale = spring({ frame, fps, config: { damping: 20 }});
 ---
 
 ## EXECUTE
+
+**Step 0 — Node.js 설치 확인**
+
+```
+Claude에게 입력:
+"node --version 과 npm --version을 확인해줘.
+ 없으면 Mac에 Node.js 설치하는 방법 알려줘."
+```
+
+Node.js가 설치되어 있어야 npx 명령어가 실행된다.
+Remotion의 필수 전제 조건이다.
+
+---
 
 **Step 1 — Remotion 프로젝트 생성**
 

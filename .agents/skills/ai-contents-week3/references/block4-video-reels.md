@@ -52,6 +52,10 @@ FFmpeg = 영상 처리 CLI 도구 (무료, 오픈소스)
 
 설치 (Mac):
   brew install ffmpeg
+
+  → brew(Homebrew)가 뭔지 모르거나 설치된 적 없을 때:
+    Claude에게 "Mac에 ffmpeg 설치하는 방법 처음부터 알려줘"라고 하면
+    Homebrew 설치부터 ffmpeg까지 순서대로 안내해준다.
 ```
 
 ---
