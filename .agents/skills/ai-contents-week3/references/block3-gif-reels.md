@@ -81,9 +81,14 @@ scroll-snap 또는 JavaScript 타이머로 전환
 ⚠️ GIPHY, Tenor 주의: 상업적 SNS 채널에 사용 시 원저작자 허가가 필요할 수 있다.
 
 안전한 소스 (CC0, 상업적 사용 가능):
-  1. Pixabay GIF (pixabay.com → 이미지 탭 → GIF 필터)
+  1. Klipy (klipy.com)
+     - 한국 SNS 크리에이터에게 최적화된 GIF 검색
+     - 검색: "AI", "비즈니스", "트렌드" 등 한국어 검색 가능
+     - 무료 사용 가능 (상업적 사용 전 이용약관 확인 권장)
+
+  2. Pixabay GIF (pixabay.com → 이미지 탭 → GIF 필터)
      - 검색: "digital", "technology", "abstract", "light"
-     - 무료, 상업적 사용 가능
+     - 무료, 상업적 사용 가능 (CC0)
 
   2. Claude가 CSS 애니메이션으로 직접 생성 (가장 안전)
      - "빛이 흐르는 파란 추상 배경 CSS 애니메이션 만들어줘"
