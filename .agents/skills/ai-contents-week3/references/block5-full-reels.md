@@ -33,6 +33,15 @@
 
 ---
 
+### 이 블록에서 누가 무엇을 하나
+
+```
+🤖 Claude   스크립트 작성, SRT 파일 생성, TTS 실행, FFmpeg 합성 명령어 실행
+👤 나        직접 녹음 선택 시 마이크 앞에서 읽기, 최종 영상 확인
+```
+
+---
+
 ### 자막(SRT)이 중요한 이유
 
 ```
@@ -95,18 +104,12 @@ Step 2: SRT 자막 생성 (Claude)
   ↓
 Step 3: TTS 음성 생성 (Mac say / ElevenLabs)
   ↓
-Step 4: FFmpeg으로 자막 burn-in + 오디오 합성 (Claude)
+Step 4: FFmpeg으로 자막 + 오디오 합성 (Claude)
   ↓
 Step 5: 최종 MP4 완성 → 업로드 준비
 
-FFmpeg 자막 합성 예시:
-  ffmpeg -i reels-v3.mp4 -i audio.mp3 \
-    -vf "subtitles=subtitle.srt:\
-         force_style='FontName=NotoSansKR,\
-         FontSize=28,PrimaryColour=&Hffffff,\
-         OutlineColour=&H000000,Outline=2'" \
-    -c:v libx264 -c:a aac \
-    reels-final.mp4
+→ Step 4의 FFmpeg 명령어는 Claude가 자동으로 만들고 실행한다.
+   "reels-v3.mp4에 자막과 음성을 합쳐줘"라고 하면 된다.
 ```
 
 ---

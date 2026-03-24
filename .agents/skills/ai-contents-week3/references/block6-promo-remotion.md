@@ -33,6 +33,15 @@
 
 ---
 
+### 이 블록에서 누가 무엇을 하나
+
+```
+🤖 Claude   Remotion 프로젝트 생성, 컴포넌트 코드 전체 작성, 렌더링 실행
+👤 나        promo_brief.md 내용 채우기, 미리보기 확인, 수정 요청
+```
+
+---
+
 ### Remotion이란?
 
 ```
@@ -77,29 +86,20 @@ npx remotion render src/index.ts MyComp out/video.mp4
 
 ---
 
-### Remotion 핵심 API
+### Remotion이 만들어주는 것
 
-```javascript
-// useCurrentFrame: 현재 프레임 번호 (0부터 시작)
-const frame = useCurrentFrame();
-
-// interpolate: 프레임에 따라 값을 부드럽게 변환
-const opacity = interpolate(frame, [0, 30], [0, 1]);
-// → 0프레임(불투명도 0) → 30프레임(불투명도 1)
-
-// spring: 물리 기반 스프링 애니메이션
-const scale = spring({ frame, fps, config: { damping: 20 }});
-
-// Sequence: 특정 프레임부터 컴포넌트 시작
-<Sequence from={60}>  {/* 60프레임 = 2초(30fps 기준) */}
-  <TextSlide text="핵심 기능 소개" />
-</Sequence>
 ```
+Claude에게 "홍보 영상 Remotion 컴포넌트 만들어줘"라고 하면
+아래를 자동으로 처리해준다:
 
-> 위 코드를 이해할 필요 없다.
-> Claude에게 "홍보 영상 Remotion 컴포넌트 만들어줘"라고 하면
-> useCurrentFrame, interpolate를 포함한 전체 코드를 생성해준다.
-> 코드에 에러가 나면 에러 메시지만 그대로 Claude에게 붙여넣으면 된다.
+  - 텍스트가 부드럽게 등장하는 애니메이션
+  - 장면이 자연스럽게 전환되는 타이밍
+  - 스프링처럼 탄성 있는 텍스트 등장 효과
+  - 각 장면이 정확한 시간에 시작되는 구조
+
+코드를 이해할 필요 없다.
+에러가 나면 에러 메시지를 그대로 Claude에게 붙여넣으면 된다.
+```
 
 ---
 

@@ -32,6 +32,15 @@
 
 ---
 
+### 이 블록에서 누가 무엇을 하나
+
+```
+🤖 Claude   Remotion 컴포넌트 코드 작성, 진행 표시기·슬라이드인 애니메이션, 렌더링 실행
+👤 나        onboarding_brief.md 내용 채우기, 화면 캡처 3개 준비, 미리보기 확인
+```
+
+---
+
 ### 온보딩 영상이란?
 
 ```
@@ -72,34 +81,19 @@
 
 ---
 
-### 온보딩 영상 Remotion 컴포넌트 패턴
+### 온보딩 영상에서 Claude가 만들어주는 것
 
-```javascript
-// 단계별 진행 표시기 (상단 바)
-const ProgressBar = ({ currentStep, totalSteps }) => {
-  return (
-    <div style={{ display: 'flex', gap: 8 }}>
-      {Array.from({ length: totalSteps }).map((_, i) => (
-        <div
-          key={i}
-          style={{
-            height: 4,
-            flex: 1,
-            background: i <= currentStep ? '#6B4EFF' : '#333',
-            borderRadius: 2,
-          }}
-        />
-      ))}
-    </div>
-  );
-};
+```
+Claude에게 "온보딩 영상 Remotion 컴포넌트 만들어줘"라고 하면
+자동으로 처리해준다:
 
-// 화살표 포인터 애니메이션 (UI 요소 가리키기)
-const Pointer = ({ frame, targetX, targetY }) => {
-  const x = interpolate(frame, [0, 20], [targetX - 50, targetX]);
-  const y = interpolate(frame, [0, 20], [targetY - 50, targetY]);
-  return <div style={{ position: 'absolute', left: x, top: y }}>👆</div>;
-};
+  - 상단 진행 표시기 (Step 1 → 2 → 3 순서 바)
+  - 스크린샷이 왼쪽에서 슬라이드인으로 등장
+  - 설명 텍스트가 스크린샷 옆에 부드럽게 나타남
+  - UI 요소를 가리키는 화살표 포인터 애니메이션
+
+코드를 이해할 필요 없다.
+에러가 나면 에러 메시지를 그대로 Claude에게 붙여넣으면 된다.
 ```
 
 ---
@@ -107,24 +101,18 @@ const Pointer = ({ frame, targetX, targetY }) => {
 ### 화면 캡처 + Remotion 조합
 
 ```
-온보딩 영상에서 자주 쓰는 패턴:
+온보딩 영상에서 쓸 수 있는 소스:
 
-1. 정적 스크린샷 슬라이드
-   → 제품 화면 캡처 → Remotion에서 이미지로 삽입
-   → 캡처: Command+Shift+4 (Mac)
+1. 정적 스크린샷   → 제품 화면 캡처 (Command+Shift+4)
+                     Remotion에서 이미지로 삽입해줌
 
-2. 화면 녹화 영상 삽입
-   → QuickTime으로 화면 녹화 → <Video> 컴포넌트로 삽입
-   → <Video src={staticFile('demo.mp4')} />
+2. 화면 녹화 영상  → QuickTime으로 녹화 → Remotion에 삽입
 
-3. 코드 → UI 애니메이션
-   → 직접 HTML/CSS로 UI 재현 후 애니메이션 추가
-   → 스크린샷 없이도 UI처럼 보이는 효과
+3. 직접 재현       → 스크린샷 없이도 UI처럼 보이는 효과 제작 가능
 
 Claude 프롬프트 패턴:
-  "스크린샷(screenshot.png)을 Remotion에서 슬라이드인
-   효과로 보여주는 컴포넌트를 만들어줘.
-   왼쪽에서 오른쪽으로 슬라이드하면서 나타나게."
+  "screenshot.png를 슬라이드인 효과로 보여주는 컴포넌트 만들어줘.
+   왼쪽에서 오른쪽으로 나타나게."
 ```
 
 ---

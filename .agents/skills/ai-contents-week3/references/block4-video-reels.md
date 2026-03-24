@@ -32,6 +32,15 @@
 
 ---
 
+### 이 블록에서 누가 무엇을 하나
+
+```
+🤖 Claude   FFmpeg 명령어 작성 및 실행, 영상 합성, 파일 저장
+👤 나        영상 소스 준비 (화면 녹화 또는 촬영), 결과 확인
+```
+
+---
+
 ### FFmpeg이란?
 
 ```
@@ -80,32 +89,18 @@ FFmpeg = 영상 처리 CLI 도구 (무료, 오픈소스)
 
 ---
 
-### FFmpeg으로 합성하는 방법
+### FFmpeg으로 할 수 있는 것
 
 ```
-기본 패턴 — 영상 위에 텍스트 오버레이:
+원하는 결과를 Claude에게 말하면 명령어를 만들고 실행까지 해준다.
 
-ffmpeg -i input.mp4 \
-  -vf "drawtext=fontfile=/path/to/font.ttf:\
-       text='AI로 일 줄이기':\
-       fontcolor=white:fontsize=80:\
-       x=(w-text_w)/2:y=100" \
-  -c:a copy output.mp4
+예시:
+  "이 영상을 세로로 바꿔줘"         → 가로 영상을 9:16 세로형으로 변환
+  "상단에 텍스트 넣어줘"            → 원하는 위치에 원하는 텍스트 삽입
+  "두 영상을 하나로 이어줘"         → 여러 클립을 순서대로 합치기
+  "음성 파일을 영상에 합쳐줘"       → 오디오 + 비디오 합성
 
-기본 패턴 — 두 영상 세로로 합치기:
-
-ffmpeg -i video1.mp4 -i video2.mp4 \
-  -filter_complex "[0:v][1:v]concat=n=2:v=1:a=0" \
-  output.mp4
-
-기본 패턴 — 세로형으로 크롭:
-
-ffmpeg -i input.mp4 \
-  -vf "crop=ih*9/16:ih,scale=1080:1920" \
-  vertical.mp4
-
-→ 이 명령어들을 외울 필요 없다.
-   Claude에게 원하는 결과를 설명하면 생성해준다.
+명령어를 알 필요 없다. 원하는 결과만 설명하면 된다.
 ```
 
 ---
