@@ -32,30 +32,24 @@
 
 ---
 
-### 이 블록에서 누가 무엇을 하나
-
-```
-🤖 Claude   GIF 배경 HTML 코드 작성, 장면 전환 타이머 설정, 파일 저장
-👤 나        GIF 소스 다운로드 및 파일명 변경, 화면 녹화, 결과 확인
-```
-
----
-
 ### GIF를 배경으로 쓰는 이유
 
 ```
 GIF의 특성:
   - 움직이는 이미지 파일 (.gif)
-  - 저작권 무료 소스가 많다 (Pixabay, Pexels)
+  - 저작권 무료 소스가 많다 (GIPHY, Tenor)
   - HTML에서 배경 이미지로 바로 사용 가능
   - 다운로드만 하면 인터넷 없이도 사용
 
 활용 방법:
   GIF (배경) + HTML 텍스트 오버레이 = 긴 릴스
 
-  GIF 파일을 다운로드해서 프로젝트 폴더에 넣고
-  Claude에게 "이 GIF를 배경으로 릴스 만들어줘"라고 하면
-  자동으로 화면을 꽉 채운 배경으로 적용해준다.
+  CSS:
+    background: url(animation.gif) center/cover no-repeat;
+    → GIF가 화면을 꽉 채우며 반복 재생
+
+  텍스트는 z-index로 GIF 위에 올린다
+    position: relative; z-index: 10;
 ```
 
 ---
@@ -84,28 +78,21 @@ scroll-snap 또는 JavaScript 타이머로 전환
 ### GIF 소스 찾는 법
 
 ```
-⚠️ GIPHY, Tenor 주의: 상업적 SNS 채널에 사용 시 원저작자 허가가 필요할 수 있다.
+추천 사이트:
+  1. Klipy (klipy.com) ← 워크플로우 최적
+     - GIF URL을 Claude Code가 curl로 직접 다운로드 가능
+     - 검색 → GIF 선택 → 우클릭 URL 복사 → Claude에게 전달
 
-안전한 소스 (CC0, 상업적 사용 가능):
-  1. Klipy (klipy.com)
-     - 한국 SNS 크리에이터에게 최적화된 GIF 검색
-     - 검색: "AI", "비즈니스", "트렌드" 등 한국어 검색 가능
-     - 무료 사용 가능 (상업적 사용 전 이용약관 확인 권장)
+  2. Pixabay (pixabay.com/gifs)
+     - CC0 라이선스, 상업적 사용 가능
+     - 검색: "technology", "ai", "data"
 
-  2. Pixabay GIF (pixabay.com → 이미지 탭 → GIF 필터)
-     - 검색: "digital", "technology", "abstract", "light"
-     - 무료, 상업적 사용 가능 (CC0)
+  3. Pexels (pexels.com)
+     - 무료, 상업적 사용 가능
 
-  2. Claude가 CSS 애니메이션으로 직접 생성 (가장 안전)
-     - "빛이 흐르는 파란 추상 배경 CSS 애니메이션 만들어줘"
-     - 저작권 걱정 없는 완전한 원본
-
-  3. Pexels Video (pexels.com/videos) → MP4를 배경으로 활용
-     - Claude에게: "이 MP4를 HTML video 태그로 배경에 넣어줘"
-
-Claude에게 맡기는 방법:
-  "AI 트렌드 릴스용 배경으로 어울리는
-   Pixabay 검색어 3개 추천해줘"
+Claude Code에게 맡기는 방법:
+  GIF URL을 알려주면 curl로 직접 다운로드해준다
+  → 수동 다운로드 없이 파이프라인 연결 가능
 ```
 
 ---
@@ -117,12 +104,17 @@ GIF 배경 위에 텍스트를 올릴 때 주의점:
   - 배경이 밝으면 텍스트가 안 보인다
   - 배경이 복잡하면 텍스트가 묻힌다
 
-Claude에게 맡기면 자동으로 처리해준다:
-  1. GIF 위에 반투명 검정 레이어 깔기  → 배경을 눌러서 텍스트를 띄움
-  2. 텍스트에 그림자 추가              → 어떤 배경에서도 잘 보임
-  3. 텍스트 배경 박스 추가             → 글자 주변에 박스를 쳐서 강조
+해결책:
+  1. 반투명 검정 오버레이
+     background: rgba(0,0,0,0.5);
+     → GIF 위에 반투명 레이어 깔기
 
-"텍스트가 잘 안 보여"라고 하면 Claude가 알아서 수정해준다.
+  2. 텍스트에 그림자 추가
+     text-shadow: 2px 2px 8px rgba(0,0,0,0.8);
+
+  3. 텍스트 배경 박스
+     background: rgba(0,0,0,0.7); padding: 12px;
+     border-radius: 8px;
 ```
 
 ---
@@ -131,26 +123,19 @@ Claude에게 맡기면 자동으로 처리해준다:
 
 **Step 1 — GIF 소스 준비**
 
-Claude에게 입력:
+Klipy(klipy.com)에서 아래 검색어로 GIF를 3개 찾아 URL을 복사한 뒤,
+Claude Code에게 입력:
 
 ```
-"AI 혁신"을 주제로 한 60초짜리 세로형 릴스를 만들려고 해.
-각 장면에 어울리는 GIF를 GIPHY에서 찾을 수 있는 영어 검색어를
-장면별로 추천해줘.
+아래 GIF URL 3개를 curl로 다운로드해서
+gif1.gif, gif2.gif, gif3.gif로 현재 프로젝트 폴더에 저장해줘.
 
-장면:
-1. 인트로: AI가 세상을 바꾼다는 Hook
-2. 문제: 반복 업무에 지치는 직장인
-3. 핵심 1: AI 자동화 도구
-4. 핵심 2: 프롬프트 작성법
-5. CTA: 팔로우 유도
+URL 1: [Klipy에서 복사한 URL]  → gif1.gif  (인트로: 나만의 브랜드)
+URL 2: [Klipy에서 복사한 URL]  → gif2.gif  (문제: 혼자 다 하는 고됨)
+URL 3: [Klipy에서 복사한 URL]  → gif3.gif  (해결: 온라인 판매 시작)
 ```
 
-GIPHY에서 추천 검색어로 GIF(또는 MP4) 3개 다운로드 후 프로젝트 폴더에 저장.
-
-💡 파일명 주의: 다운로드한 파일명이 긴 영어인 경우 아래처럼 바꿔준다.
-  → gif1.gif, gif2.gif, gif3.gif (또는 video1.mp4, video2.mp4)
-  파일명이 다르면 HTML에서 불러올 때 이미지가 안 뜬다.
+> Klipy 검색어 참고: "small business" / "handmade craft" / "online shop"
 
 ---
 
@@ -171,13 +156,15 @@ video_brief.md를 업데이트하고 아래 프롬프트로 HTML 생성:
 
 ---
 
-**Step 3 — 화면 녹화**
+**Step 3 — Playwright로 영상 녹화**
 
 ```
-1. 브라우저에서 reels-v2.html 전체화면
-2. Command+Shift+5로 녹화 시작
-3. 60초 애니메이션 완료 후 녹화 중지
-4. Block 2 결과물과 비교
+Claude에게 입력:
+"reels-v2.html을 Playwright로 열어서 60초 동안
+ 1080×1920 크기로 녹화하고 reels-v2.mp4로 저장해줘."
+
+(Playwright 없을 때 백업:
+ 브라우저 전체화면 → Command+Shift+5 → 60초 녹화 → 중지)
 ```
 
 체크리스트:

@@ -33,15 +33,6 @@
 
 ---
 
-### 이 블록에서 누가 무엇을 하나
-
-```
-🤖 Claude   Remotion 프로젝트 생성, 컴포넌트 코드 전체 작성, 렌더링 실행
-👤 나        promo_brief.md 내용 채우기, 미리보기 확인, 수정 요청
-```
-
----
-
 ### Remotion이란?
 
 ```
@@ -86,19 +77,23 @@ npx remotion render src/index.ts MyComp out/video.mp4
 
 ---
 
-### Remotion이 만들어주는 것
+### Remotion 핵심 API
 
-```
-Claude에게 "홍보 영상 Remotion 컴포넌트 만들어줘"라고 하면
-아래를 자동으로 처리해준다:
+```javascript
+// useCurrentFrame: 현재 프레임 번호 (0부터 시작)
+const frame = useCurrentFrame();
 
-  - 텍스트가 부드럽게 등장하는 애니메이션
-  - 장면이 자연스럽게 전환되는 타이밍
-  - 스프링처럼 탄성 있는 텍스트 등장 효과
-  - 각 장면이 정확한 시간에 시작되는 구조
+// interpolate: 프레임에 따라 값을 부드럽게 변환
+const opacity = interpolate(frame, [0, 30], [0, 1]);
+// → 0프레임(불투명도 0) → 30프레임(불투명도 1)
 
-코드를 이해할 필요 없다.
-에러가 나면 에러 메시지를 그대로 Claude에게 붙여넣으면 된다.
+// spring: 물리 기반 스프링 애니메이션
+const scale = spring({ frame, fps, config: { damping: 20 }});
+
+// Sequence: 특정 프레임부터 컴포넌트 시작
+<Sequence from={60}>  {/* 60프레임 = 2초(30fps 기준) */}
+  <TextSlide text="핵심 기능 소개" />
+</Sequence>
 ```
 
 ---
@@ -125,16 +120,19 @@ Claude에게 "홍보 영상 Remotion 컴포넌트 만들어줘"라고 하면
 
 ## EXECUTE
 
-**Step 0 — Node.js 설치 확인**
+**Step 0 — Remotion 설치**
 
 ```
 Claude에게 입력:
-"node --version 과 npm --version을 확인해줘.
- 없으면 Mac에 Node.js 설치하는 방법 알려줘."
-```
+"Remotion 사용에 필요한 패키지를 설치해줘.
+ Node.js 버전 확인 후 아래 명령어를 실행해줘.
 
-Node.js가 설치되어 있어야 npx 명령어가 실행된다.
-Remotion의 필수 전제 조건이다.
+ 1. Node.js 버전 확인: node -v (18 이상 필요)
+ 2. ffmpeg 설치 확인: ffmpeg -version
+    없으면: brew install ffmpeg
+ 3. Remotion CLI 전역 설치:
+    npm i -g @remotion/cli"
+```
 
 ---
 
@@ -181,6 +179,20 @@ promo_brief.md를 만들어줘.
 폰트: 굵고 깔끔하게
 ---
 ```
+
+---
+
+> 💡 **자연어로 줘도 돼요**
+> 브리프 항목을 다 정했다면 한 문장으로 줘도 됩니다:
+>
+> ```
+> "핸드메이드 액세서리 쇼핑몰 홍보 영상 60초짜리 만들어줘.
+>  타깃은 20~30대 여성, 핵심 가치는 '나만의 개성 표현'.
+>  훅 → 문제(대량생산 제품 질림) → 해결(나만의 디자인 3가지) → CTA.
+>  다크 배경, 포인트 컬러는 골드. promo_brief.md 만들고 Remotion 컴포넌트 바로 생성해줘."
+> ```
+>
+> Claude가 브리프 파일을 정리하고 컴포넌트 제작까지 이어서 해줘요.
 
 ---
 

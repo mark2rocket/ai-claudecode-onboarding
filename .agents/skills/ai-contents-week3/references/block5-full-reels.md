@@ -33,39 +33,26 @@
 
 ---
 
-### 이 블록에서 누가 무엇을 하나
-
-```
-🤖 Claude   스크립트 작성, SRT 파일 생성, TTS 실행, FFmpeg 합성 명령어 실행
-👤 나        직접 녹음 선택 시 마이크 앞에서 읽기, 최종 영상 확인
-```
-
----
-
 ### 자막(SRT)이 중요한 이유
 
 ```
 소셜미디어 영상 시청 패턴:
-  - 많은 사람이 소리 없이 본다 (출근길, 공공장소, 회의 중)
-  - 자막이 없으면 내용 파악 전에 스크롤 통과
-  - 자막이 있으면 내용 파악 → 흥미로우면 소리 켜기
-
-목표: 소리 없이 봐도 이해되고, 소리 켜면 더 몰입되는 영상
-  → 자막: 필수 (소리 OFF 사용자 대비)
-  → 음성: 권장 (알고리즘 신호 + 몰입도 향상)
+  - 85%가 소리 없이 본다 (출근길, 공공장소)
+  - 자막이 없으면 스크롤 통과
+  - 자막이 있으면 내용 파악 후 소리 켜기
 
 SRT 파일 구조:
   1
   00:00:00,000 --> 00:00:03,000
-  AI로 일 줄이기
+  직접 만든 걸 팔 수 있어요
 
   2
   00:00:03,000 --> 00:00:06,000
-  반복 업무를 자동화하면
+  재료비 + 시간 = 내 가격
 
   3
   00:00:06,000 --> 00:00:09,000
-  하루 2시간을 돌려받는다
+  인스타 DM 하나로 주문 받기
 
   → Claude가 스크립트를 받으면 SRT를 자동 생성한다
 ```
@@ -91,6 +78,12 @@ SRT 파일 구조:
 옵션 4: 직접 녹음
   → QuickTime 오디오 녹음
   → 가장 자연스러운 음성
+
+옵션 5: Qwen-TTS (고품질, API)
+  → Alibaba의 TTS 모델, 한국어 지원
+  → Claude에게: "Qwen-TTS API로 이 텍스트를
+     음성 파일(audio.mp3)로 만들어줘"
+  → ElevenLabs 대비 가격 경쟁력 높음
 ```
 
 ---
@@ -104,12 +97,18 @@ Step 2: SRT 자막 생성 (Claude)
   ↓
 Step 3: TTS 음성 생성 (Mac say / ElevenLabs)
   ↓
-Step 4: FFmpeg으로 자막 + 오디오 합성 (Claude)
+Step 4: FFmpeg으로 자막 burn-in + 오디오 합성 (Claude)
   ↓
 Step 5: 최종 MP4 완성 → 업로드 준비
 
-→ Step 4의 FFmpeg 명령어는 Claude가 자동으로 만들고 실행한다.
-   "reels-v3.mp4에 자막과 음성을 합쳐줘"라고 하면 된다.
+FFmpeg 자막 합성 예시:
+  ffmpeg -i reels-v3.mp4 -i audio.mp3 \
+    -vf "subtitles=subtitle.srt:\
+         force_style='FontName=NotoSansKR,\
+         FontSize=28,PrimaryColour=&Hffffff,\
+         OutlineColour=&H000000,Outline=2'" \
+    -c:v libx264 -c:a aac \
+    reels-final.mp4
 ```
 
 ---
@@ -159,6 +158,10 @@ audio.aiff로 저장하고 mp3로 변환해줘.
 옵션 B (직접 녹음):
 QuickTime → 파일 → 새 오디오 녹음
 스크립트 보면서 직접 읽기 → audio.mp3
+
+옵션 C (Qwen-TTS):
+subtitle.srt의 텍스트를 Qwen-TTS API로
+한국어 음성 파일(audio.mp3)로 만들어줘.
 ```
 
 ---
