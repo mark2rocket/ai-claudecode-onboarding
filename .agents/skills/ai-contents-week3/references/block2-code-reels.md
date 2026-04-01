@@ -174,7 +174,12 @@ reels.html로 저장하고 브라우저로 열어줘.
 ```
 Claude에게 입력:
 "reels.html을 Playwright로 열어서 15초 동안
- 1080×1920 크기로 녹화하고 reels.mp4로 저장해줘."
+ 1080×1920 크기로 녹화하고 reels.mp4로 저장해줘.
+ 녹화 후 ffmpeg으로 H.264 mp4로 변환까지 해줘."
+
+⚠️ 중요: Playwright는 내부적으로 webm으로 녹화한다.
+반드시 ffmpeg으로 변환해야 macOS에서 정상 재생된다:
+ffmpeg -i input.webm -vcodec libx264 -acodec aac output.mp4
 
 (Playwright 없을 때 백업:
  브라우저 전체화면 → Command+Shift+5 → 15초 녹화 → 중지)

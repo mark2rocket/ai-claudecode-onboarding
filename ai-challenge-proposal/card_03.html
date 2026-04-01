@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>Card 03 - Roadmap</title>
+<link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Noto+Sans+KR:wght@400;700;900&display=swap" rel="stylesheet">
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { background: #f0f0f0; display: flex; justify-content: center; align-items: center; min-height: 100vh; }
+.card {
+  width: 1080px; height: 1350px;
+  background: #FFFFFF;
+  position: relative;
+  padding: 72px;
+  display: flex; flex-direction: column;
+  font-family: 'Noto Sans KR', sans-serif;
+}
+.badge {
+  position: absolute; top: 52px; right: 60px;
+  background: #3D3D3D; color: #fff;
+  font-size: 22px; font-weight: 700;
+  padding: 10px 22px; border-radius: 100px;
+}
+.top-bar { width: 80px; height: 8px; background: #1A50E0; border-radius: 4px; margin-bottom: 48px; }
+.main-title {
+  font-family: 'Black Han Sans', sans-serif;
+  font-size: 96px; line-height: 1.08; color: #111; margin-bottom: 12px;
+}
+.sub { font-size: 30px; font-weight: 700; color: #1A50E0; margin-bottom: 52px; }
+
+table {
+  width: 100%; border-collapse: collapse;
+  flex: 1; margin-bottom: 32px;
+}
+thead tr { background: #1A1A1A; }
+thead th {
+  color: #fff; font-size: 24px; font-weight: 700;
+  padding: 22px 24px; text-align: left;
+  letter-spacing: 0.04em;
+}
+thead th:first-child { border-radius: 12px 0 0 0; }
+thead th:last-child { border-radius: 0 12px 0 0; }
+tbody tr { border-bottom: 1.5px solid #E8E8E8; }
+tbody tr:nth-child(even) { background: #F8F9FF; }
+tbody td {
+  padding: 26px 24px;
+  font-size: 26px; color: #333; vertical-align: middle;
+}
+.day-cell {
+  font-family: 'Black Han Sans', sans-serif;
+  font-size: 30px; color: #1A50E0;
+  white-space: nowrap;
+}
+.step-cell { font-weight: 700; color: #111; font-size: 27px; }
+.wow-cell {
+  font-size: 25px; color: #666;
+  display: flex; align-items: center; gap: 10px;
+}
+.arrow { color: #1A50E0; font-weight: 900; font-size: 22px; }
+
+.bottom-note {
+  background: #F0F4FF;
+  border-radius: 14px;
+  padding: 28px 32px;
+  font-size: 26px; font-weight: 700; color: #1A50E0;
+  text-align: center;
+  margin-bottom: 36px;
+}
+
+.footer {
+  display: flex; justify-content: space-between; align-items: center;
+  padding-top: 28px; border-top: 1.5px solid #E5E5E5;
+}
+.footer-left { display: flex; align-items: center; gap: 16px; }
+.profile-circle {
+  width: 52px; height: 52px; background: #1A50E0;
+  border-radius: 50%; display: flex; align-items: center;
+  justify-content: center; color: white; font-weight: 900; font-size: 20px;
+}
+.profile-name { font-size: 24px; font-weight: 700; color: #111; }
+.handle { font-size: 24px; font-weight: 700; color: #888; }
+</style>
+</head>
+<body>
+<div class="card">
+  <div class="badge">3/10</div>
+  <div class="top-bar"></div>
+  <div class="main-title">5일 로드맵</div>
+  <div class="sub">좀 더 자세히 살펴볼게요!</div>
+  <table>
+    <thead>
+      <tr>
+        <th>Day</th>
+        <th>단계</th>
+        <th>핵심 체험</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="day-cell">Day 1</td>
+        <td class="step-cell">AI 비서 입사일</td>
+        <td><span class="wow-cell">CLAUDE.md 작성</span></td>
+      </tr>
+      <tr>
+        <td class="day-cell">Day 2</td>
+        <td class="step-cell">보고서 자동화</td>
+        <td><span class="wow-cell">2시간 <span class="arrow">→</span> 10분</span></td>
+      </tr>
+      <tr>
+        <td class="day-cell">Day 3</td>
+        <td class="step-cell">메일함 연결</td>
+        <td><span class="wow-cell">Gmail MCP</span></td>
+      </tr>
+      <tr>
+        <td class="day-cell">Day 4</td>
+        <td class="step-cell">AI 3명 동시</td>
+        <td><span class="wow-cell">병렬 에이전트</span></td>
+      </tr>
+      <tr>
+        <td class="day-cell">Day 5</td>
+        <td class="step-cell">퇴근 후 자동</td>
+        <td><span class="wow-cell">스킬 완성</span></td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="bottom-note">📌 Day 1부터 순서대로 따라오세요. 5일 후 달라져 있어요.</div>
+  <div class="footer">
+    <div class="footer-left">
+      <div class="profile-circle">M</div>
+      <div class="profile-name">mkt.chef.ai</div>
+    </div>
+    <div class="handle">@mkt.chef.ai</div>
+  </div>
+</div>
+</body>
+</html>

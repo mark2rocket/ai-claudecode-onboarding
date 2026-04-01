@@ -104,7 +104,7 @@ Phase A 종료 시 필수 출력 문구:
 | Week 1 | `ai-contents-week1` | AX 마인드셋 + Claude Code 기초 |
 | Week 2 | `ai-contents-week2` | 카드뉴스 워크플로우 |
 | Week 3 | `ai-contents-week3` | 영상 제작 워크플로우 (릴스 + Remotion) |
-| Week 4 | (예정) | 나만의 Skill 만들기 |
+| Week 4 | `ai-contents-week4` | 나만의 카드뉴스·릴스 제작 스킬 만들기 |
 
 Week 3은 듀얼 트랙 구조:
 - **Track 1** (Block 2~5): 릴스 — HTML 애니메이션 → GIF → FFmpeg → 자막+음성

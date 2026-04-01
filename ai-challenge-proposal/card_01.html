@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Card 01 - Cover</title>
+<link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Noto+Sans+KR:wght@400;700;900&display=swap" rel="stylesheet">
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { background: #f0f0f0; display: flex; justify-content: center; align-items: center; min-height: 100vh; }
+.card {
+  width: 1080px;
+  height: 1350px;
+  background: #FFFFFF;
+  position: relative;
+  padding: 72px;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Noto Sans KR', sans-serif;
+  overflow: hidden;
+}
+.badge {
+  position: absolute;
+  top: 52px;
+  right: 60px;
+  background: #3D3D3D;
+  color: #fff;
+  font-size: 22px;
+  font-weight: 700;
+  padding: 10px 22px;
+  border-radius: 100px;
+  letter-spacing: 0.05em;
+  font-family: 'Noto Sans KR', sans-serif;
+}
+.top-bar {
+  width: 80px;
+  height: 8px;
+  background: #1A50E0;
+  border-radius: 4px;
+  margin-bottom: 60px;
+}
+.content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.label {
+  font-size: 26px;
+  font-weight: 700;
+  color: #1A50E0;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 28px;
+}
+.main-title {
+  font-family: 'Black Han Sans', sans-serif;
+  font-size: 108px;
+  line-height: 1.05;
+  color: #111111;
+  margin-bottom: 32px;
+  letter-spacing: -0.02em;
+}
+.main-title span {
+  color: #1A50E0;
+}
+.subtitle {
+  font-size: 36px;
+  font-weight: 700;
+  color: #444;
+  line-height: 1.5;
+  margin-bottom: 52px;
+}
+.desc {
+  font-size: 28px;
+  color: #666;
+  line-height: 1.8;
+  margin-bottom: 48px;
+}
+.desc strong {
+  color: #111;
+  font-weight: 700;
+}
+.tag-row {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+.tag {
+  background: #F0F4FF;
+  color: #1A50E0;
+  font-size: 22px;
+  font-weight: 700;
+  padding: 10px 22px;
+  border-radius: 100px;
+}
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 40px;
+  border-top: 1.5px solid #E5E5E5;
+}
+.footer-left {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.profile-circle {
+  width: 52px;
+  height: 52px;
+  background: #1A50E0;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: 900;
+  font-size: 20px;
+}
+.profile-name {
+  font-size: 24px;
+  font-weight: 700;
+  color: #111;
+}
+.handle {
+  font-size: 24px;
+  font-weight: 700;
+  color: #888;
+}
+</style>
+</head>
+<body>
+<div class="card">
+  <div class="badge">1/10</div>
+  <div class="top-bar"></div>
+  <div class="content">
+    <div class="label">AI Challenge</div>
+    <div class="main-title">하루 30분,<br><span>5일</span>이면</div>
+    <div class="subtitle">AI 비서가 출근해요</div>
+    <div class="desc">
+      코딩 몰라도 돼요.<br>
+      터미널 처음 봐도 괜찮아요.<br>
+      <strong>Claude Code</strong>로 내 업무를 자동화하는<br>
+      <strong>5일 챌린지</strong> 지금 시작할게요.
+    </div>
+    <div class="tag-row">
+      <div class="tag">#AI비서챌린지</div>
+      <div class="tag">#ClaudeCode</div>
+      <div class="tag">#비개발자도OK</div>
+    </div>
+  </div>
+  <div class="footer">
+    <div class="footer-left">
+      <div class="profile-circle">M</div>
+      <div class="profile-name">mkt.chef.ai</div>
+    </div>
+    <div class="handle">@mkt.chef.ai</div>
+  </div>
+</div>
+</body>
+</html>

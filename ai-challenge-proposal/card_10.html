@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>Card 10 - CTA</title>
+<link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Noto+Sans+KR:wght@400;700;900&display=swap" rel="stylesheet">
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { background: #f0f0f0; display: flex; justify-content: center; align-items: center; min-height: 100vh; }
+.card {
+  width: 1080px; height: 1350px;
+  background: #FFFFFF;
+  position: relative; padding: 72px;
+  display: flex; flex-direction: column;
+  font-family: 'Noto Sans KR', sans-serif; overflow: hidden;
+}
+.badge { position: absolute; top: 52px; right: 60px; background: #3D3D3D; color: #fff; font-size: 22px; font-weight: 700; padding: 10px 22px; border-radius: 100px; }
+.top-bar { width: 80px; height: 8px; background: #1A50E0; border-radius: 4px; margin-bottom: 52px; }
+.content { flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; }
+.profile-circle-lg {
+  width: 140px; height: 140px;
+  background: #1A50E0; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  color: white; font-family: 'Black Han Sans', sans-serif;
+  font-size: 52px; margin-bottom: 32px;
+  box-shadow: 0 8px 40px rgba(26,80,224,0.25);
+}
+.main-title {
+  font-family: 'Black Han Sans', sans-serif;
+  font-size: 96px; color: #111; line-height: 1.1;
+  margin-bottom: 24px; letter-spacing: -0.01em;
+}
+.main-title span { color: #1A50E0; }
+.question {
+  font-size: 28px; color: #555; line-height: 1.7;
+  margin-bottom: 12px;
+}
+.question strong { color: #111; font-weight: 900; }
+.divider {
+  width: 60px; height: 4px;
+  background: #1A50E0; border-radius: 2px;
+  margin: 36px auto;
+}
+.cta-group { display: flex; flex-direction: column; gap: 18px; width: 100%; }
+.cta-primary {
+  background: #1A50E0; color: white;
+  font-size: 30px; font-weight: 700;
+  padding: 28px 40px; border-radius: 100px;
+  text-align: center;
+}
+.cta-secondary {
+  background: transparent;
+  border: 2px solid #C8D5F5;
+  color: #1A50E0; font-size: 28px; font-weight: 700;
+  padding: 26px 40px; border-radius: 100px;
+  text-align: center;
+}
+.footer {
+  display: flex; justify-content: space-between; align-items: center;
+  padding-top: 32px; border-top: 1.5px solid #E5E5E5;
+}
+.footer-left { display: flex; align-items: center; gap: 16px; }
+.footer-profile { width: 52px; height: 52px; background: #1A50E0; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-weight: 900; font-size: 20px; }
+.profile-name { font-size: 24px; font-weight: 700; color: #111; }
+.handle { font-size: 24px; font-weight: 700; color: #888; }
+.bottom-note { font-size: 22px; color: #bbb; text-align: center; margin-top: 20px; }
+</style>
+</head>
+<body>
+<div class="card">
+  <div class="badge">10/10</div>
+  <div class="top-bar"></div>
+  <div class="content">
+    <div class="profile-circle-lg">M</div>
+    <div class="main-title">지금<br><span>시작해요</span></div>
+    <div class="question">
+      5일 후 내 업무가 달라져요.<br>
+      <strong>하루 30분이면 충분해요.</strong>
+    </div>
+    <div class="divider"></div>
+    <div class="cta-group">
+      <div class="cta-primary">🔖 이 카드 저장해두기</div>
+      <div class="cta-secondary">더 많은 레시피 @mkt.chef.ai</div>
+    </div>
+  </div>
+  <div class="bottom-note">AI 비서 챌린지 × @mkt.chef.ai</div>
+  <div class="footer">
+    <div class="footer-left">
+      <div class="footer-profile">M</div>
+      <div class="profile-name">mkt.chef.ai</div>
+    </div>
+    <div class="handle">@mkt.chef.ai</div>
+  </div>
+</div>
+</body>
+</html>
