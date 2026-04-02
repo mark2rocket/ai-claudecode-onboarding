@@ -21,7 +21,19 @@
 | Week 1 | AX 마인드셋 + Claude Code 기본 & 필수 기능 |
 | Week 2 | 카드뉴스 워크플로우 — 기획·프롬프트 구체화·파이프라인·템플릿 |
 | Week 3 | 영상 제작 워크플로우 — 릴스(HTML+FFmpeg) & Remotion(홍보/온보딩/강의) |
-| Week 4 | (예정) |
+| Week 4 | 나만의 콘텐츠 제작 스킬 만들기 — `/my-cardnews` & `/my-reels` 자동화 스킬 패키징 |
+
+### Week 4 블록 구성
+
+| 블록 | 주제 |
+|------|------|
+| Block 0 | 복습 + 스킬 구조 이해 — 스킬 = 내 콘텐츠 공장 |
+| Block 1 | 카드뉴스 스킬 설계 — `brand.md` + 폴더 구조 |
+| Block 2 | 카드뉴스 스킬 완성 — Human-in-the-loop + 첫 실행 |
+| Block 3 | 릴스 스킬 설계 — `style.md` + 다중 영상소스 설정 |
+| Block 4 | 릴스 스킬 완성 — 체크리스트 + FFmpeg 자막/음성 합성 |
+| Block 5 | 스킬 최적화 — 금지 목록, CSS 변수, 템플릿 버전 관리, 레퍼런스 이미지 복제 |
+| Block 6 | 배포 + 4주 마무리 — GUI 업그레이드 넥스트스텝 |
 
 ### Week 1 블록 구성
 
@@ -61,6 +73,7 @@ git clone https://github.com/mark2rocket/claudecode-ai-contents-challenge.git
 cp -r claudecode-ai-contents-challenge/.agents/skills/ai-contents-week1 ~/.claude/skills/
 cp -r claudecode-ai-contents-challenge/.agents/skills/ai-contents-week2 ~/.claude/skills/
 cp -r claudecode-ai-contents-challenge/.agents/skills/ai-contents-week3 ~/.claude/skills/
+cp -r claudecode-ai-contents-challenge/.agents/skills/ai-contents-week4 ~/.claude/skills/
 ```
 
 ### 설치 확인
@@ -71,7 +84,7 @@ Claude Code 터미널에서:
 /skill list
 ```
 
-`ai-contents-week1`, `ai-contents-week2`, `ai-contents-week3` 항목이 보이면 성공입니다.
+`ai-contents-week1`, `ai-contents-week2`, `ai-contents-week3`, `ai-contents-week4` 항목이 보이면 성공입니다.
 
 ---
 
@@ -83,6 +96,7 @@ Claude Code 터미널에서 아래 명령을 입력하면 수업이 시작됩니
 /ai-contents-week1   # Week 1: AX 마인드셋 + Claude Code 기초
 /ai-contents-week2   # Week 2: 카드뉴스 워크플로우
 /ai-contents-week3   # Week 3: 영상 제작 워크플로우 (릴스 & Remotion)
+/ai-contents-week4   # Week 4: 나만의 카드뉴스·릴스 스킬 만들기
 ```
 
 Claude가 어느 블록부터 시작할지 물어보고, 설명 → 실습 → 퀴즈 순서로 진행합니다.
