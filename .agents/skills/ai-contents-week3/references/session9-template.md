@@ -50,18 +50,16 @@ Session 0: 복습 + 기획의 중요성
   → 영상은 결정할 요소가 많다 → video_brief.md가 핵심
 
 Session 1: 트랙 선택
-  → Track 1(릴스) vs Track 2(Remotion) — 목적이 트랙을 결정한다
+  → Main Track(릴스) vs Bonus Track(Remotion) — 목적이 트랙을 결정한다
 
-Track 1 — 릴스 (Session 2~5):
+Main Track — 릴스 (Session 2~5):
   Session 2: HTML 애니메이션 → 화면 녹화 (소스 제로)
   Session 3: GIF 배경 + 텍스트 오버레이 (움직이는 배경)
   Session 4: 영상 소스 + FFmpeg 합성 (실제 촬영 활용)
   Session 5: SRT 자막 + TTS 음성 → 완성 릴스
 
-Track 2 — Remotion (Session 6~8):
-  Session 6: 홍보 영상 (Hook → 문제 → 해결 → CTA)
-  Session 7: 온보딩 영상 (단계별 제품 안내)
-  Session 8: 강의 영상 (슬라이드 + 코드 애니메이션)
+Bonus Track — Remotion (Session 6):
+  Session 6: 홍보 / 온보딩 / 강의 영상 — 브리프 하나로 선택해서 생성
 ```
 
 ---
@@ -93,17 +91,17 @@ Track 2 — Remotion (Session 6~8):
 ### 릴스 브리프 vs 홍보/강의 브리프 차이
 
 ```
-릴스 (Track 1):
+릴스 (Main Track):
   - 형식: 세로 9:16, 15~90초
   - 도구: HTML + FFmpeg
   - 핵심 항목: 장면 구성(초 단위), GIF/영상소스, 자막 여부
 
-홍보 영상 (Track 2 - Remotion):
+홍보 영상 (Bonus Track - Remotion):
   - 형식: 가로 16:9, 30~60초
   - 도구: Remotion (React)
   - 핵심 항목: Hook 문장, 문제-해결-CTA 구조
 
-강의 영상 (Track 2 - Remotion):
+강의 영상 (Bonus Track - Remotion):
   - 형식: 가로 16:9, 5~20분
   - 도구: Remotion (React)
   - 핵심 항목: 학습 목표, 슬라이드 구성, 코드 예시
@@ -122,7 +120,7 @@ Track 2 — Remotion (Session 6~8):
 # 릴스 브리프 템플릿
 
 ## 트랙
-Track 1 - 릴스 (세로형 1080×1920)
+Main Track - 릴스 (세로형 1080×1920)
 
 ## 주제
 [어떤 내용을 전달할 것인가?]
@@ -165,7 +163,7 @@ Track 1 - 릴스 (세로형 1080×1920)
 # 홍보 영상 브리프 템플릿
 
 ## 트랙
-Track 2 - Remotion (가로형 1920×1080)
+Bonus Track - Remotion (가로형 1920×1080)
 
 ## 제품/서비스
 [이름과 한 줄 설명]
@@ -203,7 +201,7 @@ Track 2 - Remotion (가로형 1920×1080)
 # 강의 영상 브리프 템플릿
 
 ## 트랙
-Track 2 - Remotion (가로형 1920×1080)
+Bonus Track - Remotion (가로형 1920×1080)
 
 ## 강의 주제
 [배울 개념 또는 기술 한 줄]
@@ -286,11 +284,11 @@ Week 3 완료!
 
 지금 갖게 된 것:
 ┌──────────────────────────────────────────┐
-│  Track 1: 릴스 제작 파이프라인          │
+│  Main Track: 릴스 제작 파이프라인       │
 │    HTML → GIF → 영상소스 → 자막+음성   │
 │                                          │
-│  Track 2: Remotion 영상 3종             │
-│    홍보 / 온보딩 / 강의 컴포넌트        │
+│  Bonus Track: Remotion 영상             │
+│    홍보 / 온보딩 / 강의 — 브리프로 선택│
 │                                          │
 │  Session 9: 재사용 브리프 템플릿 3종      │
 │    다음 영상은 교체만 하면 된다         │

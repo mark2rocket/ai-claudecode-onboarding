@@ -62,15 +62,13 @@ Phase A의 마지막에는 반드시 아래 형태의 문구를 출력하고 Sto
 ### 세션 특수 규칙
 
 - **Session 0 (복습 + 기획)**: Phase A에서 Week 1~2 요약 + 영상 기획 중요성 설명 → Stop. Phase B에서 퀴즈 1개.
-- **Session 1 (트랙 선택)**: Phase A에서 Track 1/Track 2 설명 + 선택 기준 안내 → Stop. **Phase B의 QUIZ가 트랙 선택** — 선택 결과에 따라 Track 1은 Session 2로, Track 2는 Session 6으로 이동.
-- **Session 2 (코딩만으로 짧은 릴스)**: Track 1. Phase A에서 HTML 애니메이션 → 화면 녹화 방법 안내 → Stop. Phase B에서 퀴즈 1개.
-- **Session 3 (GIF + 코딩으로 긴 릴스)**: Track 1. Phase A에서 GIF 배경 + 텍스트 오버레이 설명 → Stop. Phase B에서 퀴즈 1개.
-- **Session 4 (GIF + 영상소스로 긴 릴스)**: Track 1. Phase A에서 FFmpeg 활용 + 영상 합성 설명 → Stop. Phase B에서 퀴즈 1개.
-- **Session 5 (자막 + 음성 완성 릴스)**: Track 1. Phase A에서 SRT 자막 + 음성 합성 설명 → Stop. **퀴즈 없음.** 완성 영상이 증거.
-- **Session 6 (홍보 영상 - Remotion)**: Track 2. Phase A에서 Remotion 기본 구조 + 홍보 영상 설계 안내 → Stop. Phase B에서 퀴즈 1개.
-- **Session 7 (온보딩 영상 - Remotion)**: Track 2. Phase A에서 온보딩 구조 + Remotion 컴포넌트 설명 → Stop. Phase B에서 퀴즈 1개.
-- **Session 8 (강의 영상 - Remotion)**: Track 2. Phase A에서 강의 영상 구조 + 슬라이드 애니메이션 설명 → Stop. **퀴즈 없음.** 완성 영상이 증거.
-- **Session 9 (복습 + 템플릿)**: Phase A에서 Session 1~8 흐름 정리 + 영상 템플릿 3종 생성 안내 → Stop. Phase B에서 퀴즈 1개 + Week 3 마무리.
+- **Session 1 (트랙 선택)**: Phase A에서 Main Track/Bonus Track 설명 + 선택 기준 안내 → Stop. **Phase B의 QUIZ가 트랙 선택** — 선택 결과에 따라 Main Track은 Session 2로, Bonus Track은 Session 6으로 이동.
+- **Session 2 (코딩만으로 짧은 릴스)**: Main Track. Phase A에서 HTML 애니메이션 → 화면 녹화 방법 안내 → Stop. Phase B에서 퀴즈 1개.
+- **Session 3 (GIF + 코딩으로 긴 릴스)**: Main Track. Phase A에서 GIF 배경 + 텍스트 오버레이 설명 → Stop. Phase B에서 퀴즈 1개.
+- **Session 4 (GIF + 영상소스로 긴 릴스)**: Main Track. Phase A에서 FFmpeg 활용 + 영상 합성 설명 → Stop. Phase B에서 퀴즈 1개.
+- **Session 5 (자막 + 음성 완성 릴스)**: Main Track. Phase A에서 SRT 자막 + 음성 합성 설명 → Stop. **퀴즈 없음.** 완성 영상이 증거.
+- **Session 6 (Remotion — 홍보/온보딩/강의)**: Bonus Track. Phase A에서 Remotion 개념 + 3가지 영상 유형 소개 + 유형 선택 안내 → Stop. Phase B에서 퀴즈 1개.
+- **Session 9 (복습 + 템플릿)**: Phase A에서 Session 1~6 흐름 정리 + 영상 템플릿 3종 생성 안내 → Stop. Phase B에서 퀴즈 1개 + Week 3 마무리.
 
 ---
 
@@ -79,14 +77,12 @@ Phase A의 마지막에는 반드시 아래 형태의 문구를 출력하고 Sto
 | 세션 | 파일 |
 |------|------|
 | Session 0 | `references/session0-review.md` (복습 + 기획의 중요성) |
-| Session 1 | `references/session1-track-select.md` (트랙 선택: 릴스 vs Remotion) |
+| Session 1 | `references/session1-track-select.md` (트랙 선택: Main Track vs Bonus Track) |
 | Session 2 | `references/session2-code-reels.md` (코딩만으로 짧은 릴스) |
 | Session 3 | `references/session3-gif-reels.md` (GIF + 코딩으로 긴 릴스) |
 | Session 4 | `references/session4-video-reels.md` (GIF + 영상소스로 긴 릴스) |
 | Session 5 | `references/session5-full-reels.md` (자막 + 음성 완성 릴스) |
-| Session 6 | `references/session6-promo-remotion.md` (홍보 영상 - Remotion) |
-| Session 7 | `references/session7-onboarding-remotion.md` (온보딩 영상 - Remotion) |
-| Session 8 | `references/session8-lecture-remotion.md` (강의 영상 - Remotion) |
+| Session 6 | `references/session6-remotion.md` (Remotion — 홍보/온보딩/강의 선택) |
 | Session 9 | `references/session9-template.md` (복습 + 영상 템플릿 3종) |
 
 > 파일 경로는 이 SKILL.md 기준 상대경로다.
@@ -98,8 +94,8 @@ Phase A의 마지막에는 반드시 아래 형태의 문구를 출력하고 Sto
 
 - 한 번에 한 세션씩 진행한다
 - "다음", "skip", 세션 번호/이름으로 이동한다
-- **Track 1 경로**: Session 0 → 1 → 2 → 3 → 4 → 5 → 9
-- **Track 2 경로**: Session 0 → 1 → 6 → 7 → 8 → 9
+- **Main Track 경로**: Session 0 → 1 → 2 → 3 → 4 → 5 → 9
+- **Bonus Track 경로**: Session 0 → 1 → 6 → 9
 - Session 9는 두 트랙 모두의 마무리 세션이다
 - Session 9 완료 후 → Week 4 예고 멘트를 출력한다
 
@@ -143,16 +139,14 @@ Week 3에서는 이것들을 영상 제작에 직접 적용합니다.
 ### Week 3 세션 구성
 
 | Session | 트랙 | 주제 | 핵심 체험 |
-|-------|------|------|-----------|
+|---------|------|------|-----------|
 | 0 | 공통 | 복습 + 기획의 중요성 | 영상은 카드뉴스보다 기획 요소가 많다 |
-| 1 | 공통 | 트랙 선택 | 릴스(Track 1) vs Remotion(Track 2) |
-| 2 | Track 1 | 코딩만으로 짧은 릴스 | HTML 애니메이션 → 화면 녹화 |
-| 3 | Track 1 | GIF + 코딩으로 긴 릴스 | GIF 배경 + 텍스트 오버레이 |
-| 4 | Track 1 | GIF + 영상소스로 긴 릴스 | FFmpeg으로 영상 합성 |
-| 5 | Track 1 | 자막 + 음성 완성 릴스 | SRT + TTS + FFmpeg 최종 합성 |
-| 6 | Track 2 | 홍보 영상 - Remotion | React 컴포넌트로 홍보 영상 |
-| 7 | Track 2 | 온보딩 영상 - Remotion | 단계별 제품 설명 영상 |
-| 8 | Track 2 | 강의 영상 - Remotion | 슬라이드 + 코드 애니메이션 |
+| 1 | 공통 | 트랙 선택 | Main Track(릴스) vs Bonus Track(Remotion) |
+| 2 | Main | 코딩만으로 짧은 릴스 | HTML 애니메이션 → 화면 녹화 |
+| 3 | Main | GIF + 코딩으로 긴 릴스 | GIF 배경 + 텍스트 오버레이 |
+| 4 | Main | GIF + 영상소스로 긴 릴스 | FFmpeg으로 영상 합성 |
+| 5 | Main | 자막 + 음성 완성 릴스 | SRT + TTS + FFmpeg 최종 합성 |
+| 6 | Bonus | Remotion 영상 | 홍보 / 온보딩 / 강의 중 선택해서 제작 |
 | 9 | 공통 | 복습 + 영상 템플릿 | 재사용 가능한 영상 브리프 3종 |
 
 ```json
@@ -162,9 +156,9 @@ AskUserQuestion({
     "header": "시작 세션",
     "options": [
       {"label": "Session 0: 복습 + 기획의 중요성", "description": "Week 1~2 돌아보기 + 영상 기획이 왜 더 중요한지 — 처음이라면 여기서 시작"},
-      {"label": "Session 1: 트랙 선택", "description": "릴스(Track 1) vs Remotion(Track 2) — 내 목적에 맞는 트랙 고르기"},
-      {"label": "Track 1 - Session 2부터", "description": "코딩만으로 짧은 릴스 → GIF → 영상소스 → 자막/음성 순서로"},
-      {"label": "Track 2 - Session 6부터", "description": "Remotion으로 홍보/온보딩/강의 영상 — 번호를 말해주세요"}
+      {"label": "Session 1: 트랙 선택", "description": "Main Track(릴스) vs Bonus Track(Remotion) — 내 목적에 맞는 트랙 고르기"},
+      {"label": "Main Track - Session 2부터", "description": "코딩만으로 짧은 릴스 → GIF → 영상소스 → 자막/음성 순서로"},
+      {"label": "Bonus Track - Session 6", "description": "Remotion으로 홍보/온보딩/강의 영상 — 브리프 하나로 바로 시작"}
     ],
     "multiSelect": false
   }]
