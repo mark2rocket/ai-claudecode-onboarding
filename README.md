@@ -23,33 +23,6 @@
 | Week 3 | 영상 제작 워크플로우 — 릴스(HTML+FFmpeg) & Remotion(홍보/온보딩/강의) |
 | Week 4 | 나만의 콘텐츠 제작 스킬 만들기 — `/my-cardnews` & `/my-reels` 자동화 스킬 패키징 |
 
-### Week 4 세션 구성
-
-| 세션 | 주제 |
-|------|------|
-| Session 0 | 복습 + 스킬 구조 이해 — 스킬 = 내 콘텐츠 공장 |
-| Session 1 | 카드뉴스 스킬 설계 — `brand.md` + 폴더 구조 |
-| Session 2 | 카드뉴스 스킬 완성 — Human-in-the-loop + 첫 실행 |
-| Session 3 | 릴스 스킬 설계 — `style.md` + 다중 영상소스 설정 |
-| Session 4 | 릴스 스킬 완성 — 체크리스트 + FFmpeg 자막/음성 합성 |
-| Session 5 | 스킬 최적화 — 금지 목록, CSS 변수, 템플릿 버전 관리, 레퍼런스 이미지 복제 |
-| Session 6 | 배포 + 4주 마무리 — GUI 업그레이드 넥스트스텝 |
-
-### Week 1 세션 구성
-
-| 세션 | 주제 |
-|------|------|
-| Session 0 | AX 마인드셋 — AI 시대에 일하는 방식 |
-| Session 1 | 설치 & 첫 실행 |
-| Session 2 | 7일 후 모습 미리 체험 (`/oh-my-cardnews` 데모) |
-| Session 3 | 왜 Claude Code인가? |
-| Session 4-1 | Memory — Claude가 나를 기억하게 하기 |
-| Session 4-2 | Skill — 반복 작업 자동화 |
-| Session 4-3 | MCP — 외부 도구 연결 |
-| Session 4-4 | Subagent — 병렬 작업 위임 |
-| Session 4-5 | Advanced Features 소개 |
-| Session 5 | git & GitHub 기초 |
-
 ---
 
 ## 설치 방법
