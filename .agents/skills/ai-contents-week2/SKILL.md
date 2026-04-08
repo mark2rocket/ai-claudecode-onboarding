@@ -61,7 +61,8 @@ Phase A의 마지막에는 반드시 아래 형태의 문구를 출력하고 Sto
 
 ### 세션 특수 규칙
 
-- **Session Recap (Week 1 복습)**: Phase A만. 퀴즈 없음. 7줄 요약 + Week 1→2 연결 설명 후 자동으로 Session 0으로 이동.
+- **Session Recap (Week 1 복습)**: Phase A만. 퀴즈 없음. 7줄 요약 + Week 1→2 연결 설명 후 자동으로 Session HTML로 이동.
+- **Session HTML (왜 HTML인가?)**: Phase A 설명 + 실행 안내 → Stop. Phase B에서 퀴즈 1개. 완료 후 Session 0으로 이동.
 - **Session 0 (기획 = 추측 통제)**: Phase A 설명 + 실행 안내 → Stop. Phase B에서 퀴즈 1개.
 - **Session 1 (한 줄 프롬프트)**: Phase A에서 날것 프롬프트 실행 안내 → Stop. Phase B에서 퀴즈 1개.
 - **Session 2 (독자·분량 지정)**: Phase A에서 예측 훈련 + 실행 안내 → Stop. Phase B에서 퀴즈 1개.
@@ -79,6 +80,7 @@ Phase A의 마지막에는 반드시 아래 형태의 문구를 출력하고 Sto
 | 세션 | 파일 |
 |------|------|
 | Session Recap | `references/session-recap.md` (Week 1 복습 + Week 2 연결) |
+| Session HTML | `references/session-html-osmu.md` (왜 HTML인가? OSMU 개념) |
 | Session 0 | `references/session0-planning.md` (기획 = 추측 통제) |
 | Session 1 | `references/session1-simple.md` (한 줄 프롬프트) |
 | Session 2 | `references/session2-target.md` (독자·분량 지정) |
@@ -134,15 +136,15 @@ AskUserQuestion({
     "header": "Week 1 복습",
     "options": [
       {"label": "복습 세션 보기", "description": "Week 1 → Week 2 연결을 4컷 만화로 확인 (5분)"},
-      {"label": "바로 시작", "description": "Session 0 기획 = 추측 통제부터 바로 시작"}
+      {"label": "바로 시작", "description": "Session HTML(왜 HTML인가?) → Session 0 순서로 시작"}
     ],
     "multiSelect": false
   }]
 })
 ```
 
-> "복습 세션 보기" 선택 시 → `references/session-recap.md` 읽고 내용 출력 → 자동으로 Session 0으로 이동
-> "바로 시작" 선택 시 → 아래 세션 선택 질문으로 이동
+> "복습 세션 보기" 선택 시 → `references/session-recap.md` 읽고 내용 출력 → 자동으로 Session HTML로 이동
+> "바로 시작" 선택 시 → 자동으로 Session HTML로 이동 → Session HTML 완료 후 아래 세션 선택 질문으로 이동
 
 **3. 세션 선택 질문**
 
