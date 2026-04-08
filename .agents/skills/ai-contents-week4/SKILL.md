@@ -14,13 +14,13 @@ description: AI 컨텐츠 워크플로우 챌린지 4주차! 나만의 카드뉴
 > 이 프로토콜은 이 스킬의 최우선 규칙이다.
 > 아래 규칙을 위반하면 수업이 망가진다.
 
-### 각 블록은 반드시 2턴에 걸쳐 진행한다
+### 각 세션은 반드시 2턴에 걸쳐 진행한다
 
 ```
 ┌─ Phase A (첫 번째 턴) ──────────────────────────────┐
-│ 1. references/에서 해당 블록 파일의 EXPLAIN 섹션을 읽는다    │
+│ 1. references/에서 해당 세션 파일의 EXPLAIN 섹션을 읽는다    │
 │ 2. 내용을 설명한다                                        │
-│ 3. references/에서 해당 블록 파일의 EXECUTE 섹션을 읽는다    │
+│ 3. references/에서 해당 세션 파일의 EXECUTE 섹션을 읽는다    │
 │ 4. "지금 직접 실행해보세요"라고 안내한다                     │
 │ 5. ⛔ 여기서 반드시 STOP. 턴을 종료한다.                    │
 │                                                          │
@@ -32,11 +32,11 @@ description: AI 컨텐츠 워크플로우 챌린지 4주차! 나만의 카드뉴
   ⬇️ 사용자가 돌아와서 "했어", "완료", "다음" 등을 입력한다
 
 ┌─ Phase B (두 번째 턴) ──────────────────────────────┐
-│ 1. references/에서 해당 블록 파일의 QUIZ 섹션을 읽는다       │
+│ 1. references/에서 해당 세션 파일의 QUIZ 섹션을 읽는다       │
 │ 2. AskUserQuestion으로 퀴즈를 출제한다                     │
 │ 3. 정답/오답 피드백을 준다                                 │
-│ 4. 다음 블록으로 이동할지 AskUserQuestion으로 묻는다         │
-│ 5. ⛔ 다음 블록을 시작하면 다시 Phase A부터.                │
+│ 4. 다음 세션으로 이동할지 AskUserQuestion으로 묻는다         │
+│ 5. ⛔ 다음 세션을 시작하면 다시 Phase A부터.                │
 └──────────────────────────────────────────────────────────┘
 ```
 
@@ -59,29 +59,29 @@ Phase A의 마지막에는 반드시 아래 형태의 문구를 출력하고 Sto
 
 이 문구 이후에 어떤 도구 호출(AskUserQuestion 포함)이나 추가 텍스트도 출력하지 않는다.
 
-### 블록 특수 규칙
+### 세션 특수 규칙
 
-- **Block 0 (복습 + 구조 이해)**: Phase A에서 Week 1~3 요약 + 스킬 구조 설명 → Stop. Phase B에서 퀴즈 1개.
-- **Block 1 (카드뉴스 스킬 설계)**: Phase A에서 스킬 폴더 구조 + brand.md 역할 설명 → Stop. Phase B에서 퀴즈 1개.
-- **Block 2 (카드뉴스 스킬 완성)**: Phase A에서 Human-in-the-loop 구조 + SKILL.md 작성 → Stop. Phase B에서 퀴즈 1개.
-- **Block 3 (릴스 스킬 설계)**: Phase A에서 릴스 스킬 폴더 구조 + style.md 작성 → Stop. Phase B에서 퀴즈 1개.
-- **Block 4 (릴스 스킬 완성)**: Phase A에서 릴스 Human-in-the-loop 체크리스트 + SKILL.md 작성 → Stop. Phase B에서 퀴즈 1개.
-- **Block 5 (스킬 최적화)**: Phase A만. **퀴즈 없음.** 최적화 팁 6가지 안내 + 실습 → Stop.
-- **Block 6 (배포 + 마무리)**: Phase A에서 배포 명령어 + 4주 마무리 정리 → Stop. Phase B에서 4주 마무리 퀴즈 1개.
+- **Session 0 (복습 + 구조 이해)**: Phase A에서 Week 1~3 요약 + 스킬 구조 설명 → Stop. Phase B에서 퀴즈 1개.
+- **Session 1 (카드뉴스 스킬 설계)**: Phase A에서 스킬 폴더 구조 + brand.md 역할 설명 → Stop. Phase B에서 퀴즈 1개.
+- **Session 2 (카드뉴스 스킬 완성)**: Phase A에서 Human-in-the-loop 구조 + SKILL.md 작성 → Stop. Phase B에서 퀴즈 1개.
+- **Session 3 (릴스 스킬 설계)**: Phase A에서 릴스 스킬 폴더 구조 + style.md 작성 → Stop. Phase B에서 퀴즈 1개.
+- **Session 4 (릴스 스킬 완성)**: Phase A에서 릴스 Human-in-the-loop 체크리스트 + SKILL.md 작성 → Stop. Phase B에서 퀴즈 1개.
+- **Session 5 (스킬 최적화)**: Phase A만. **퀴즈 없음.** 최적화 팁 6가지 안내 + 실습 → Stop.
+- **Session 6 (배포 + 마무리)**: Phase A에서 배포 명령어 + 4주 마무리 정리 → Stop. Phase B에서 4주 마무리 퀴즈 1개.
 
 ---
 
 ## References 파일 맵
 
-| 블록 | 파일 |
+| 세션 | 파일 |
 |------|------|
-| Block 0 | `references/block0-review.md` (복습 + 스킬 구조 이해) |
-| Block 1 | `references/block1-cardnews-design.md` (카드뉴스 스킬 설계) |
-| Block 2 | `references/block2-cardnews-build.md` (카드뉴스 스킬 완성) |
-| Block 3 | `references/block3-reels-design.md` (릴스 스킬 설계) |
-| Block 4 | `references/block4-reels-build.md` (릴스 스킬 완성) |
-| Block 5 | `references/block5-optimize.md` (스킬 최적화) |
-| Block 6 | `references/block6-deploy.md` (배포 + 마무리) |
+| Session 0 | `references/session0-review.md` (복습 + 스킬 구조 이해) |
+| Session 1 | `references/session1-cardnews-design.md` (카드뉴스 스킬 설계) |
+| Session 2 | `references/session2-cardnews-build.md` (카드뉴스 스킬 완성) |
+| Session 3 | `references/session3-reels-design.md` (릴스 스킬 설계) |
+| Session 4 | `references/session4-reels-build.md` (릴스 스킬 완성) |
+| Session 5 | `references/session5-optimize.md` (스킬 최적화) |
+| Session 6 | `references/session6-deploy.md` (배포 + 마무리) |
 
 > 파일 경로는 이 SKILL.md 기준 상대경로다.
 > 각 reference 파일은 `## EXPLAIN`, `## EXECUTE`, `## QUIZ` 섹션으로 구성된다.
@@ -90,10 +90,10 @@ Phase A의 마지막에는 반드시 아래 형태의 문구를 출력하고 Sto
 
 ## 진행 규칙
 
-- 한 번에 한 블록씩 진행한다
-- "다음", "skip", 블록 번호/이름으로 이동한다
-- **기본 경로**: Block 0 → 1 → 2 → 3 → 4 → 5 → 6
-- Block 6 완료 후 → "4주 챌린지 완주" 축하 메시지를 출력한다
+- 한 번에 한 세션씩 진행한다
+- "다음", "skip", 세션 번호/이름으로 이동한다
+- **기본 경로**: Session 0 → 1 → 2 → 3 → 4 → 5 → 6
+- Session 6 완료 후 → "4주 챌린지 완주" 축하 메시지를 출력한다
 
 ---
 
@@ -117,7 +117,7 @@ Week 3  Track 1       GIF+텍스트, FFmpeg, 자막+음성
 Week 4에서는 이것들을 내 자동화 스킬로 만듭니다.
 ```
 
-**2. 시작 블록을 선택한다**
+**2. 시작 세션을 선택한다**
 
 ### 전체 커리큘럼 (4주)
 
@@ -132,9 +132,9 @@ Week 4에서는 이것들을 내 자동화 스킬로 만듭니다.
 
 ---
 
-### Week 4 블록 구성
+### Week 4 세션 구성
 
-| Block | 주제 | 핵심 체험 |
+| Session | 주제 | 핵심 체험 |
 |-------|------|-----------|
 | 0 | 복습 + 스킬 구조 이해 | 스킬 = 내 콘텐츠 공장 구조 파악 |
 | 1 | 카드뉴스 스킬 설계 | brand.md + 폴더 구조 설계 |
@@ -148,16 +148,16 @@ Week 4에서는 이것들을 내 자동화 스킬로 만듭니다.
 AskUserQuestion({
   "questions": [{
     "question": "Week 4 어디서부터 시작할까요?",
-    "header": "시작 블록",
+    "header": "시작 세션",
     "options": [
-      {"label": "Block 0: 복습 + 스킬 구조 이해", "description": "처음이라면 여기서 시작 — 기존 스킬 파일 열어보기"},
-      {"label": "Block 1: 카드뉴스 스킬 설계", "description": "내 브랜드 정보 저장 + 파일 구조 설계"},
-      {"label": "Block 3: 릴스 스킬 설계", "description": "카드뉴스 스킬 완성 후 여기로"},
-      {"label": "Block 5: 스킬 최적화", "description": "스킬 만들었는데 결과가 마음에 안 들 때"}
+      {"label": "Session 0: 복습 + 스킬 구조 이해", "description": "처음이라면 여기서 시작 — 기존 스킬 파일 열어보기"},
+      {"label": "Session 1: 카드뉴스 스킬 설계", "description": "내 브랜드 정보 저장 + 파일 구조 설계"},
+      {"label": "Session 3: 릴스 스킬 설계", "description": "카드뉴스 스킬 완성 후 여기로"},
+      {"label": "Session 5: 스킬 최적화", "description": "스킬 만들었는데 결과가 마음에 안 들 때"}
     ],
     "multiSelect": false
   }]
 })
 ```
 
-> 시작 블록 선택 후 → 해당 블록의 Phase A부터 진행한다.
+> 시작 세션 선택 후 → 해당 세션의 Phase A부터 진행한다.

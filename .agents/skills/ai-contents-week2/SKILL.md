@@ -14,13 +14,13 @@ description: AI 컨텐츠 워크플로우 챌린지 2주차! 카드뉴스 기획
 > 이 프로토콜은 이 스킬의 최우선 규칙이다.
 > 아래 규칙을 위반하면 수업이 망가진다.
 
-### 각 블록은 반드시 2턴에 걸쳐 진행한다
+### 각 세션은 반드시 2턴에 걸쳐 진행한다
 
 ```
 ┌─ Phase A (첫 번째 턴) ──────────────────────────────┐
-│ 1. references/에서 해당 블록 파일의 EXPLAIN 섹션을 읽는다    │
+│ 1. references/에서 해당 세션 파일의 EXPLAIN 섹션을 읽는다    │
 │ 2. 내용을 설명한다                                        │
-│ 3. references/에서 해당 블록 파일의 EXECUTE 섹션을 읽는다    │
+│ 3. references/에서 해당 세션 파일의 EXECUTE 섹션을 읽는다    │
 │ 4. "지금 직접 실행해보세요"라고 안내한다                     │
 │ 5. ⛔ 여기서 반드시 STOP. 턴을 종료한다.                    │
 │                                                          │
@@ -32,11 +32,11 @@ description: AI 컨텐츠 워크플로우 챌린지 2주차! 카드뉴스 기획
   ⬇️ 사용자가 돌아와서 "했어", "완료", "다음" 등을 입력한다
 
 ┌─ Phase B (두 번째 턴) ──────────────────────────────┐
-│ 1. references/에서 해당 블록 파일의 QUIZ 섹션을 읽는다       │
+│ 1. references/에서 해당 세션 파일의 QUIZ 섹션을 읽는다       │
 │ 2. AskUserQuestion으로 퀴즈를 출제한다                     │
 │ 3. 정답/오답 피드백을 준다                                 │
-│ 4. 다음 블록으로 이동할지 AskUserQuestion으로 묻는다         │
-│ 5. ⛔ 다음 블록을 시작하면 다시 Phase A부터.                │
+│ 4. 다음 세션으로 이동할지 AskUserQuestion으로 묻는다         │
+│ 5. ⛔ 다음 세션을 시작하면 다시 Phase A부터.                │
 └──────────────────────────────────────────────────────────┘
 ```
 
@@ -59,35 +59,35 @@ Phase A의 마지막에는 반드시 아래 형태의 문구를 출력하고 Sto
 
 이 문구 이후에 어떤 도구 호출(AskUserQuestion 포함)이나 추가 텍스트도 출력하지 않는다.
 
-### 블록 특수 규칙
+### 세션 특수 규칙
 
-- **Block Recap (Week 1 복습)**: Phase A만. 퀴즈 없음. 7줄 요약 + Week 1→2 연결 설명 후 자동으로 Block 0으로 이동.
-- **Block 0 (기획 = 추측 통제)**: Phase A 설명 + 실행 안내 → Stop. Phase B에서 퀴즈 1개.
-- **Block 1 (한 줄 프롬프트)**: Phase A에서 날것 프롬프트 실행 안내 → Stop. Phase B에서 퀴즈 1개.
-- **Block 2 (독자·분량 지정)**: Phase A에서 예측 훈련 + 실행 안내 → Stop. Phase B에서 퀴즈 1개.
-- **Block 3 (스토리 구조 설계)**: Phase A에서 스토리 구조 틀 제공 + 실행 안내 → Stop. Phase B에서 퀴즈 1개.
-- **Block 4 (카드 시각화)**: Phase A에서 텍스트→HTML 시각 전환 체험 안내 → Stop. Phase B에서 퀴즈 1개.
-- **Block 5a (색상·폰트 지정)**: Phase A에서 스펙 4요소 설명 + 실행 안내 → Stop. Phase B에서 퀴즈 1개.
-- **Block 5b (카드 배치 설계)**: Phase A에서 레이아웃 3요소 + 카드 유형별 구조 설명 + 실행 안내 → Stop. Phase B에서 퀴즈 1개.
-- **Block 6 (전체 흐름 실행)**: Phase A에서 5단계 순서대로 실행 안내 → Stop. **퀴즈 없음.** 완성 결과물로 마무리.
-- **Block 7 (재사용 템플릿)**: Phase A에서 3종 생성 + 교체 체험 안내 → Stop. Phase B에서 퀴즈 1개 + Week 2 마무리.
+- **Session Recap (Week 1 복습)**: Phase A만. 퀴즈 없음. 7줄 요약 + Week 1→2 연결 설명 후 자동으로 Session 0으로 이동.
+- **Session 0 (기획 = 추측 통제)**: Phase A 설명 + 실행 안내 → Stop. Phase B에서 퀴즈 1개.
+- **Session 1 (한 줄 프롬프트)**: Phase A에서 날것 프롬프트 실행 안내 → Stop. Phase B에서 퀴즈 1개.
+- **Session 2 (독자·분량 지정)**: Phase A에서 예측 훈련 + 실행 안내 → Stop. Phase B에서 퀴즈 1개.
+- **Session 3 (스토리 구조 설계)**: Phase A에서 스토리 구조 틀 제공 + 실행 안내 → Stop. Phase B에서 퀴즈 1개.
+- **Session 4 (카드 시각화)**: Phase A에서 텍스트→HTML 시각 전환 체험 안내 → Stop. Phase B에서 퀴즈 1개.
+- **Session 5a (색상·폰트 지정)**: Phase A에서 스펙 4요소 설명 + 실행 안내 → Stop. Phase B에서 퀴즈 1개.
+- **Session 5b (카드 배치 설계)**: Phase A에서 레이아웃 3요소 + 카드 유형별 구조 설명 + 실행 안내 → Stop. Phase B에서 퀴즈 1개.
+- **Session 6 (전체 흐름 실행)**: Phase A에서 5단계 순서대로 실행 안내 → Stop. **퀴즈 없음.** 완성 결과물로 마무리.
+- **Session 7 (재사용 템플릿)**: Phase A에서 3종 생성 + 교체 체험 안내 → Stop. Phase B에서 퀴즈 1개 + Week 2 마무리.
 
 ---
 
 ## References 파일 맵
 
-| 블록 | 파일 |
+| 세션 | 파일 |
 |------|------|
-| Block Recap | `references/block-recap.md` (Week 1 복습 + Week 2 연결) |
-| Block 0 | `references/block0-planning.md` (기획 = 추측 통제) |
-| Block 1 | `references/block1-simple.md` (한 줄 프롬프트) |
-| Block 2 | `references/block2-target.md` (독자·분량 지정) |
-| Block 3 | `references/block3-content.md` (스토리 구조 설계) |
-| Block 4 | `references/block4-structure.md` (카드 시각화) |
-| Block 5a | `references/block5a-design.md` (색상·폰트 지정) |
-| Block 5b | `references/block5b-layout.md` (카드 배치 설계) |
-| Block 6 | `references/block6-pipeline.md` (전체 흐름 실행) |
-| Block 7 | `references/block7-template.md` (재사용 템플릿 3종) |
+| Session Recap | `references/session-recap.md` (Week 1 복습 + Week 2 연결) |
+| Session 0 | `references/session0-planning.md` (기획 = 추측 통제) |
+| Session 1 | `references/session1-simple.md` (한 줄 프롬프트) |
+| Session 2 | `references/session2-target.md` (독자·분량 지정) |
+| Session 3 | `references/session3-content.md` (스토리 구조 설계) |
+| Session 4 | `references/session4-structure.md` (카드 시각화) |
+| Session 5a | `references/session5a-design.md` (색상·폰트 지정) |
+| Session 5b | `references/session5b-layout.md` (카드 배치 설계) |
+| Session 6 | `references/session6-pipeline.md` (전체 흐름 실행) |
+| Session 7 | `references/session7-template.md` (재사용 템플릿 3종) |
 
 > 파일 경로는 이 SKILL.md 기준 상대경로다.
 > 각 reference 파일은 `## EXPLAIN`, `## EXECUTE`, `## QUIZ` 섹션으로 구성된다.
@@ -96,12 +96,12 @@ Phase A의 마지막에는 반드시 아래 형태의 문구를 출력하고 Sto
 
 ## 진행 규칙
 
-- 한 번에 한 블록씩 진행한다
-- "다음", "skip", 블록 번호/이름으로 이동한다
-- 각 블록의 프롬프트는 이전 블록 프롬프트에 단어가 추가되는 방식으로 진화한다
-- 실습 결과물(스크린샷, HTML 파일)은 이후 블록 비교에 활용한다
-- Block 6 완료 후 → Block 7(템플릿)으로 자연스럽게 이어진다
-- Block 7 완료 후 → Week 3 예고 멘트를 출력한다
+- 한 번에 한 세션씩 진행한다
+- "다음", "skip", 세션 번호/이름으로 이동한다
+- 각 세션의 프롬프트는 이전 세션 프롬프트에 단어가 추가되는 방식으로 진화한다
+- 실습 결과물(스크린샷, HTML 파일)은 이후 세션 비교에 활용한다
+- Session 6 완료 후 → Session 7(템플릿)으로 자연스럽게 이어진다
+- Session 7 완료 후 → Week 3 예고 멘트를 출력한다
 
 ---
 
@@ -125,26 +125,26 @@ Hook/Plugin 자동 실행·기능 확장
 Week 2에서는 이것들을 카드뉴스 제작에 직접 적용합니다.
 ```
 
-**2. 복습 블록 여부를 묻는다**
+**2. 복습 세션 여부를 묻는다**
 
 ```json
 AskUserQuestion({
   "questions": [{
-    "question": "Week 1 복습 블록을 볼까요?",
+    "question": "Week 1 복습 세션을 볼까요?",
     "header": "Week 1 복습",
     "options": [
-      {"label": "복습 블록 보기", "description": "Week 1 → Week 2 연결을 4컷 만화로 확인 (5분)"},
-      {"label": "바로 시작", "description": "Block 0 기획 = 추측 통제부터 바로 시작"}
+      {"label": "복습 세션 보기", "description": "Week 1 → Week 2 연결을 4컷 만화로 확인 (5분)"},
+      {"label": "바로 시작", "description": "Session 0 기획 = 추측 통제부터 바로 시작"}
     ],
     "multiSelect": false
   }]
 })
 ```
 
-> "복습 블록 보기" 선택 시 → `references/block-recap.md` 읽고 내용 출력 → 자동으로 Block 0으로 이동
-> "바로 시작" 선택 시 → 아래 블록 선택 질문으로 이동
+> "복습 세션 보기" 선택 시 → `references/session-recap.md` 읽고 내용 출력 → 자동으로 Session 0으로 이동
+> "바로 시작" 선택 시 → 아래 세션 선택 질문으로 이동
 
-**3. 블록 선택 질문**
+**3. 세션 선택 질문**
 
 ### 전체 커리큘럼 (4주)
 
@@ -159,9 +159,9 @@ AskUserQuestion({
 
 ---
 
-### Week 2 블록 구성
+### Week 2 세션 구성
 
-| Block | 주제 | 핵심 체험 |
+| Session | 주제 | 핵심 체험 |
 |-------|------|-----------|
 | 0 | 기획 = 추측 통제 | Claude의 추측을 줄이는 것이 기획이다 |
 | 1 | 한 줄 프롬프트 | 한 문장으로 시작 → "Claude가 전부 결정한다" 체험 |
@@ -177,16 +177,16 @@ AskUserQuestion({
 AskUserQuestion({
   "questions": [{
     "question": "Week 2 어디서부터 시작할까요?",
-    "header": "시작 블록",
+    "header": "시작 세션",
     "options": [
-      {"label": "Block 0: 기획 = 추측 통제", "description": "Claude의 추측을 줄이는 것이 기획 — 처음이라면 여기서 시작"},
-      {"label": "Block 1: 한 줄 프롬프트", "description": "한 문장으로 시작 — Claude가 전부 결정하는 것 체험"},
-      {"label": "Block 3: 스토리 구조 설계", "description": "스토리 구조 + 리서치/인터뷰 트랙으로 내용 설계"},
-      {"label": "Block 6 이후부터", "description": "Block 6(전체 흐름 실행), Block 7(재사용 템플릿) — 번호를 말해주세요"}
+      {"label": "Session 0: 기획 = 추측 통제", "description": "Claude의 추측을 줄이는 것이 기획 — 처음이라면 여기서 시작"},
+      {"label": "Session 1: 한 줄 프롬프트", "description": "한 문장으로 시작 — Claude가 전부 결정하는 것 체험"},
+      {"label": "Session 3: 스토리 구조 설계", "description": "스토리 구조 + 리서치/인터뷰 트랙으로 내용 설계"},
+      {"label": "Session 6 이후부터", "description": "Session 6(전체 흐름 실행), Session 7(재사용 템플릿) — 번호를 말해주세요"}
     ],
     "multiSelect": false
   }]
 })
 ```
 
-> 시작 블록 선택 후 → 해당 블록의 Phase A부터 진행한다.
+> 시작 세션 선택 후 → 해당 세션의 Phase A부터 진행한다.
