@@ -63,13 +63,12 @@ Phase A의 마지막에는 반드시 아래 형태의 문구를 출력하고 Sto
 
 - **Session Recap (Week 1 복습)**: Phase A만. 퀴즈 없음. 7줄 요약 + Week 1→2 연결 설명 후 자동으로 Session HTML로 이동.
 - **Session HTML (왜 HTML인가?)**: Phase A 설명 + 실행 안내 → Stop. Phase B에서 퀴즈 1개. 완료 후 Session 0으로 이동.
-- **Session 0 (기획 = 추측 통제)**: Phase A 설명 + 실행 안내 → Stop. Phase B에서 퀴즈 1개.
-- **Session 1 (한 줄 프롬프트)**: Phase A에서 날것 프롬프트 실행 안내 → Stop. Phase B에서 퀴즈 1개.
-- **Session 2 (독자·분량 지정)**: Phase A에서 예측 훈련 + 실행 안내 → Stop. Phase B에서 퀴즈 1개.
-- **Session 3 (스토리 구조 설계)**: Phase A에서 스토리 구조 틀 제공 + 실행 안내 → Stop. Phase B에서 퀴즈 1개.
-- **Session 4 (카드 시각화)**: Phase A에서 텍스트→HTML 시각 전환 체험 안내 → Stop. Phase B에서 퀴즈 1개.
-- **Session 5a (색상·폰트 지정)**: Phase A에서 스펙 4요소 설명 + 실행 안내 → Stop. Phase B에서 퀴즈 1개.
-- **Session 5b (카드 배치 설계)**: Phase A에서 레이아웃 3요소 + 카드 유형별 구조 설명 + 실행 안내 → Stop. Phase B에서 퀴즈 1개.
+- **Session 0 (기획 = 추측 통제)**: Phase A 설명 + 실행 안내 → Stop. Phase B에서 퀴즈 1개. 완료 후 Session 1로 이동.
+- **Session 1 (주제 + 대상 + 분량)**: Phase A에서 2단계 프롬프트 비교 실행 안내 → Stop. Phase B에서 퀴즈 1개.
+- **Session 2 (스토리구조 + 후킹)**: Phase A에서 스토리 구조 틀 + 후킹 기법 설명 + 실행 안내 → Stop. Phase B에서 퀴즈 1개.
+- **Session 3 (디자인 스펙 + 레이아웃)**: Phase A에서 스펙 4요소 + 레이아웃 3요소 설명 + 실행 안내 → Stop. Phase B에서 퀴즈 1개.
+- **Session 4 (HTML 생성)**: Phase A에서 content_brief.md → HTML 변환 안내 → Stop. Phase B에서 퀴즈 1개.
+- **Session 5 (PNG 저장)**: Phase A에서 HTML → PNG 변환 안내 → Stop. **퀴즈 없음.** PNG 파일이 증거.
 - **Session 6 (전체 흐름 실행)**: Phase A에서 5단계 순서대로 실행 안내 → Stop. **퀴즈 없음.** 완성 결과물로 마무리.
 - **Session 7 (재사용 템플릿)**: Phase A에서 3종 생성 + 교체 체험 안내 → Stop. Phase B에서 퀴즈 1개 + Week 2 마무리.
 
@@ -82,12 +81,11 @@ Phase A의 마지막에는 반드시 아래 형태의 문구를 출력하고 Sto
 | Session Recap | `references/session-recap.md` (Week 1 복습 + Week 2 연결) |
 | Session HTML | `references/session-html-osmu.md` (왜 HTML인가? OSMU 개념) |
 | Session 0 | `references/session0-planning.md` (기획 = 추측 통제) |
-| Session 1 | `references/session1-simple.md` (한 줄 프롬프트) |
-| Session 2 | `references/session2-target.md` (독자·분량 지정) |
-| Session 3 | `references/session3-content.md` (스토리 구조 설계) |
-| Session 4 | `references/session4-structure.md` (카드 시각화) |
-| Session 5a | `references/session5a-design.md` (색상·폰트 지정) |
-| Session 5b | `references/session5b-layout.md` (카드 배치 설계) |
+| Session 1 | `references/session1-brief.md` (주제 + 대상 + 분량) |
+| Session 2 | `references/session2-story.md` (스토리구조 + 후킹) |
+| Session 3 | `references/session3-design.md` (디자인 스펙 + 레이아웃) |
+| Session 4 | `references/session4-html.md` (HTML 생성) |
+| Session 5 | `references/session5-png.md` (PNG 저장) |
 | Session 6 | `references/session6-pipeline.md` (전체 흐름 실행) |
 | Session 7 | `references/session7-template.md` (재사용 템플릿 3종) |
 
@@ -100,8 +98,9 @@ Phase A의 마지막에는 반드시 아래 형태의 문구를 출력하고 Sto
 
 - 한 번에 한 세션씩 진행한다
 - "다음", "skip", 세션 번호/이름으로 이동한다
-- 각 세션의 프롬프트는 이전 세션 프롬프트에 단어가 추가되는 방식으로 진화한다
-- 실습 결과물(스크린샷, HTML 파일)은 이후 세션 비교에 활용한다
+- 각 세션의 프롬프트는 이전 세션에서 쌓인 스펙이 누적되는 방식으로 진화한다
+- 실습 결과물(HTML, PNG 파일)은 이후 세션 비교에 활용한다
+- Session 5 완료 후 → Session 6(전체 흐름)으로 자연스럽게 이어진다
 - Session 6 완료 후 → Session 7(템플릿)으로 자연스럽게 이어진다
 - Session 7 완료 후 → Week 3 예고 멘트를 출력한다
 
@@ -152,9 +151,9 @@ AskUserQuestion({
 
 | Week | 주제 | 내용 |
 |------|------|------|
-| Week 1 | 기본 셋업 & 개념 | AX 마인드셋, 설치, 체험, 필수 기능 7개, CLI/git 기초 |
-| **Week 2** | 카드뉴스 워크플로우 | 기획 이론, 프롬프트 구체화, 파이프라인, 템플릿 |
-| Week 3 | 영상 워크플로우 | 스크립트·자막·섬네일·업로드 자동화 |
+| Week 1 | 기본 셋업 & 개념 | AX 마인드셋, 설치, 체험, 필수 기능 7개, git 기초 |
+| **Week 2** | 카드뉴스 워크플로우 | 기획, 스토리+후킹, 디자인, HTML, PNG, 템플릿 |
+| Week 3 | 영상 워크플로우 | 릴스·Remotion 영상 제작 자동화 |
 | Week 4 | 스킬 만들기 | 나만의 워크플로우를 Skill로 패키징 |
 
 > 지금은 **Week 2**입니다.
@@ -164,15 +163,14 @@ AskUserQuestion({
 ### Week 2 세션 구성
 
 | Session | 주제 | 핵심 체험 |
-|-------|------|-----------|
-| 0 | 기획 = 추측 통제 | Claude의 추측을 줄이는 것이 기획이다 |
-| 1 | 한 줄 프롬프트 | 한 문장으로 시작 → "Claude가 전부 결정한다" 체험 |
-| 2 | 독자·분량 지정 | 독자와 분량이 결과를 바꾼다 |
-| 3 | 스토리 구조 설계 | 스토리 구조 + 리서치/인터뷰 트랙 선택 |
-| 4 | 카드 시각화 | 텍스트 → 브라우저 카드 시각 전환 체험 |
-| 5a | 색상·폰트 지정 | 수치가 디자이너 역할을 한다 |
-| 5b | 카드 배치 설계 | 카드 유형별 배치·여백·계층 구조 |
-| 6 | 전체 흐름 실행 | 5단계를 순서대로 직접 실행 |
+|---------|------|-----------|
+| 0 | 기획 = 추측 통제 | 스펙이 없으면 Claude가 전부 결정한다 |
+| 1 | 주제 + 대상 + 분량 | 세 가지 정보가 결과물 전체를 바꾼다 |
+| 2 | 스토리구조 + 후킹 | 읽히는 흐름 + 클릭하게 만드는 제목 |
+| 3 | 디자인 스펙 + 레이아웃 | 수치가 디자이너 역할을 한다 |
+| 4 | HTML 생성 | 스펙 → 브라우저 카드 시각화 |
+| 5 | PNG 저장 | HTML → SNS 업로드용 이미지 |
+| 6 | 전체 흐름 실행 | 5단계를 한 번에 순서대로 실행 |
 | 7 | 재사용 템플릿 | 완성형 HTML 3종 → 다음번엔 교체만 |
 
 ```json
@@ -181,10 +179,10 @@ AskUserQuestion({
     "question": "Week 2 어디서부터 시작할까요?",
     "header": "시작 세션",
     "options": [
-      {"label": "Session 0: 기획 = 추측 통제", "description": "Claude의 추측을 줄이는 것이 기획 — 처음이라면 여기서 시작"},
-      {"label": "Session 1: 한 줄 프롬프트", "description": "한 문장으로 시작 — Claude가 전부 결정하는 것 체험"},
-      {"label": "Session 3: 스토리 구조 설계", "description": "스토리 구조 + 리서치/인터뷰 트랙으로 내용 설계"},
-      {"label": "Session 6 이후부터", "description": "Session 6(전체 흐름 실행), Session 7(재사용 템플릿) — 번호를 말해주세요"}
+      {"label": "Session 0: 기획 = 추측 통제", "description": "처음이라면 여기서 시작 — Claude의 추측을 줄이는 것이 기획"},
+      {"label": "Session 1: 주제 + 대상 + 분량", "description": "세 가지 정보만으로 결과물이 얼마나 달라지는지 체험"},
+      {"label": "Session 2: 스토리구조 + 후킹", "description": "읽히는 흐름 + 클릭하게 만드는 제목 기법"},
+      {"label": "Session 4 이후부터", "description": "Session 4(HTML), 5(PNG), 6(전체 흐름), 7(템플릿) — 번호를 말해주세요"}
     ],
     "multiSelect": false
   }]
