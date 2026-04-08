@@ -63,8 +63,8 @@ Week 1~3에서 손으로 반복하던 과정들이 있다.
 ~/.claude/skills/ai-contents-week2/
 ├── SKILL.md              ← 오케스트레이터 (어떤 순서로 뭘 할지 지시)
 └── references/
-    ├── block0-review.md  ← 실행 레시피 1
-    ├── block1-brief.md   ← 실행 레시피 2
+    ├── session-recap.md   ← 실행 레시피 1
+    ├── session1-brief.md  ← 실행 레시피 2
     └── ...
 ```
 
@@ -98,7 +98,7 @@ Week 1~3에서 손으로 반복하던 과정들이 있다.
 
 2. `~/.claude/skills/ai-contents-week2/references/` 파일 목록을 확인하고 출력한다
 
-3. `references/block0-review.md` 상단을 읽어서 EXPLAIN / EXECUTE / QUIZ 3섹션 구조를 보여준다
+3. `references/session-recap.md` 상단을 읽어서 EXPLAIN / EXECUTE / QUIZ 3섹션 구조를 보여준다
 
 **체크리스트**
 - [ ] SKILL.md 오케스트레이터 역할 확인
